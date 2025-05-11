@@ -17,51 +17,130 @@
 </head>
 <body class="bg-white min-h-screen flex flex-col items-center">
   <!-- 상단 타이틀 -->
-  <header class="h-12 w-full flex items-center justify-center sticky top-0 bg-white z-20">
-    <img src="https://raw.githubusercontent.com/realbeginnerr/testwebsite/main/logo.png" alt="T's recipe 로고" class="mx-auto" style="width:120px; height:28px;" />
+  <header class="h-12 w-full flex items-center justify-between px-4 sticky top-0 bg-white z-20 border-b">
+    
+    <!-- Hotjar Tracking Code for tsrecipe -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:3805153,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+    
+    <a href="index.html">
+      <img src="https://raw.githubusercontent.com/realbeginnerr/testwebsite/main/logo.png" alt="T's recipe 로고" style="width:120px; height:28px;" />
+    </a>
+    <div class="relative">
+      <input type="text" placeholder="레시피 검색" class="w-48 h-8 px-3 py-1 text-sm border rounded-full focus:outline-none focus:border-gray-400" id="searchInput" />
+      <button class="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer" id="searchButton">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+      <button class="absolute right-8 top-1/2 transform -translate-y-1/2 cursor-pointer hidden" id="clearButton">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400 hover:text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
   </header>
   <!-- 메인 컨텐츠 -->
-  <main class="w-full flex flex-col items-center gap-8 mt-2 mb-28">
+  <main class="w-full flex flex-col items-center gap-8 mt-2 mb-28" id="recipeList">
     <!-- 제육볶음 -->
-    <a href="jeyukbokkeum.html" class="flex flex-col items-center w-[360px] max-w-[90vw]">
+    <a href="jeyukbokkeum.html" class="recipe-item flex flex-col items-center w-[360px] max-w-[90vw]" data-title="제육볶음">
       <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/jeyukbokkeum/00.jpg" alt="제육볶음" class="w-full h-40 object-cover rounded-lg mb-2" />
       <span class="text-base font-normal mt-1">제육볶음</span>
     </a>
     <!-- 양념장 -->
-    <a href="sauce.html" class="flex flex-col items-center w-[360px] max-w-[90vw]">
+    <a href="sauce.html" class="recipe-item flex flex-col items-center w-[360px] max-w-[90vw]" data-title="양념장">
       <div class="w-full h-40 bg-gray-400 rounded-lg mb-2"></div>
       <span class="text-base font-normal mt-1">양념장</span>
     </a>
     <!-- 르뱅쿠키 -->
-    <a href="lebincookie.html" class="flex flex-col items-center w-[360px] max-w-[90vw]">
+    <a href="lebincookie.html" class="recipe-item flex flex-col items-center w-[360px] max-w-[90vw]" data-title="르뱅쿠키">
       <div class="w-full h-40 bg-gray-400 rounded-lg mb-2"></div>
       <span class="text-base font-normal mt-1">르뱅쿠키</span>
     </a>
     <!-- 무생채 -->
-    <a href="shreddedradish.html" class="flex flex-col items-center w-[360px] max-w-[90vw]">
+    <a href="shreddedradish.html" class="recipe-item flex flex-col items-center w-[360px] max-w-[90vw]" data-title="무생채">
       <div class="w-full h-40 bg-gray-400 rounded-lg mb-2"></div>
       <span class="text-base font-normal mt-1">무생채</span>
     </a>
     <!-- 어묵 손가락 김밥 -->
-    <a href="fishcakefingergimbap.html" class="flex flex-col items-center w-[360px] max-w-[90vw]">
+    <a href="fishcakefingergimbap.html" class="recipe-item flex flex-col items-center w-[360px] max-w-[90vw]" data-title="어묵 손가락 김밥">
       <div class="w-full h-40 bg-gray-400 rounded-lg mb-2"></div>
-      <span class="text-base font-normal mt-1">아믁 손가락 김밥</span>
+      <span class="text-base font-normal mt-1">어묵 손가락 김밥</span>
     </a>
     <!-- 치킨 데리야끼 -->
-    <a href="chickenteriyaki.html" class="flex flex-col items-center w-[360px] max-w-[90vw]">
+    <a href="chickenteriyaki.html" class="recipe-item flex flex-col items-center w-[360px] max-w-[90vw]" data-title="치킨 데리야끼">
       <div class="w-full h-40 bg-gray-400 rounded-lg mb-2"></div>
       <span class="text-base font-normal mt-1">치킨 데리야끼</span>
     </a>
     <!-- 애호박 볶음 -->
-    <a href="stirfriedzucchini.html" class="flex flex-col items-center w-[360px] max-w-[90vw]">
+    <a href="stirfriedzucchini.html" class="recipe-item flex flex-col items-center w-[360px] max-w-[90vw]" data-title="애호박 볶음">
       <div class="w-full h-40 bg-gray-400 rounded-lg mb-2"></div>
       <span class="text-base font-normal mt-1">애호박 볶음</span>
     </a>
     <!-- 브로콜리 두부 무침 -->
-    <a href="broccoliseasonedtofu.html" class="flex flex-col items-center w-[360px] max-w-[90vw]">
+    <a href="broccoliseasonedtofu.html" class="recipe-item flex flex-col items-center w-[360px] max-w-[90vw]" data-title="브로콜리 두부 무침">
       <div class="w-full h-40 bg-gray-400 rounded-lg mb-2"></div>
       <span class="text-base font-normal mt-1">브로콜리 두부 무침</span>
     </a>
   </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.querySelector('#searchInput');
+      const searchButton = document.getElementById('searchButton');
+      const clearButton = document.getElementById('clearButton');
+      const recipeItems = document.querySelectorAll('.recipe-item');
+
+      function performSearch() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        
+        recipeItems.forEach(item => {
+          const title = item.getAttribute('data-title').toLowerCase();
+          if (title.includes(searchTerm)) {
+            item.style.display = 'flex';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      }
+
+      // 엔터키 이벤트 처리
+      searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          performSearch();
+        }
+      });
+
+      // 검색 버튼 클릭 이벤트 처리
+      searchButton.addEventListener('click', performSearch);
+
+      // 검색어 입력 시 삭제 버튼 표시/숨김 처리
+      searchInput.addEventListener('input', function() {
+        if (this.value.length > 0) {
+          clearButton.classList.remove('hidden');
+        } else {
+          clearButton.classList.add('hidden');
+        }
+      });
+
+      // 삭제 버튼 클릭 이벤트 처리
+      clearButton.addEventListener('click', function() {
+        searchInput.value = '';
+        clearButton.classList.add('hidden');
+        // 검색어 삭제 후 모든 레시피 표시
+        recipeItems.forEach(item => {
+          item.style.display = 'flex';
+        });
+      });
+    });
+  </script>
 </body>
 </html> 
