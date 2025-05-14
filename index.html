@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZC9D06H6D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RZC9D06H6D');
+</script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>T's recipe</title>
@@ -47,6 +58,10 @@
         </svg>
       </button>
     </div>
+    <div class="flex gap-2 ml-2">
+      <button class="text-sm font-medium text-gray-600 hover:text-gray-900">KOR</button>
+      <button class="text-sm font-medium text-gray-600 hover:text-gray-900">ENG</button>
+    </div>
   </header>
   <!-- 메인 컨텐츠 -->
   <main class="w-full flex flex-col items-center gap-8 mt-2 mb-28" id="recipeList">
@@ -89,6 +104,11 @@
     <a href="broccoliseasonedtofu.html" class="recipe-item flex flex-col items-center w-[360px] max-w-[90vw]" data-title="브로콜리 두부 무침">
       <div class="w-full h-40 bg-gray-400 rounded-lg mb-2"></div>
       <span class="text-base font-normal mt-1">브로콜리 두부 무침</span>
+    </a>
+
+    <!-- 메뉴 설문 버튼 -->
+    <a href="https://forms.gle/siKczBVLdsFdWyRG9" target="_blank" rel="noopener noreferrer" class="w-[360px] max-w-[90vw] h-12 bg-gray-100 hover:bg-gray-200 rounded-lg text-gray-700 font-medium transition-colors duration-200 flex items-center justify-center">
+      메뉴 설문
     </a>
   </main>
 
