@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZC9D06H6D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RZC9D06H6D');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Hotjar Tracking Code for tsrecipe -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3805153,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+  <!-- Pretendard (Korean) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <!-- Roboto (English, Numbers) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+    .font-roboto { font-family: 'Roboto', sans-serif; }
+    @media (min-width: 1325px) {
+      .flow-lg-row { flex-direction: row !important; }
+      .flow-lg-arrow-h { display: inline !important; }
+      .flow-lg-arrow-v { display: none !important; }
+      .flow-lg-mb0 { margin-bottom: 0 !important; margin-right: 0.5rem !important; }
+    }
+    @media (max-width: 1324px) {
+      .flow-lg-row { flex-direction: column !important; }
+      .flow-lg-arrow-h { display: none !important; }
+      .flow-lg-arrow-v { display: inline !important; }
+      .flow-lg-mb0 { margin-bottom: 0.5rem !important; margin-right: 0 !important; }
+    }
+  </style>
+</head>
+<body class="bg-[#FAF9F6] min-h-screen flex flex-col items-center pb-8">
+  <!-- 상단 이미지 -->
+  <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini/00.jpg" alt="test" class="w-full h-64 object-cover shadow mb-8" />
+  <!-- 제목 -->
+  <h1 class="text-4xl font-bold text-gray-800 mb-4 tracking-wide">애호박 볶음</h1>
+  <!-- 정보 바 -->
+  <div class="flex flex-wrap justify-center items-center gap-4 text-lg text-gray-700 mb-6">
+    <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">person</span> 2인분</div>
+    <span class="mx-2">|</span>
+    <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">payments</span> ₩2,000</div>
+    <span class="mx-2">|</span>
+    <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">schedule</span> 20분</div>
+  </div>
+  <!-- 설명 -->
+  <div class="text-center text-lg text-gray-700 mb-2">
+    <span class="text-red-600 font-semibold">레시피 따라해보다가 방금 어디까지 봤는지 헷갈렸던 사람 손 <span class='inline-block'>🖐</span></span><br />
+    내가 요리할 때 보려고 큰 글씨로, 프로세스를 잘게 쪼개어 적어둔 레시피
+  </div>
+  <!-- 하단 정보 -->
+  <div class="text-center text-base text-gray-500 mt-4">
+    넉넉한 양 | 15분 | 레시피 참고: <a href="https://www.youtube.com/watch?v=6JMzS_dzT5Q" target="_blank" rel="noopener noreferrer" class="font-roboto text-blue-600 hover:underline">@이남자의cook</a>
+  </div>
+  <!-- 구글 아이콘 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <!-- 두 번째 섹션: 주방/냉장고 순서 안내 -->
+  <div class="w-full flex flex-col items-center mt-12">
+    <!-- 주방/냉장고 이미지 (예시 이미지 사용) -->
+    <div class="w-full relative mb-8">
+      <img src="img/test.png" alt="주방과 냉장고" class="w-full rounded-lg shadow" />
+    <!-- 안내 텍스트 -->
+    <div class="w-full bg-[#FAF9F6] p-6 text-gray-800 text-lg">
+      <div class="mb-4">
+        <span class="inline-block align-middle text-lg mr-1">🚨</span>
+        요리하면서 왔다갔다 하지 않으려면, 순서대로 꺼내기
+      </div>
+      <div class="mb-4 text-gray-700">
+        ① 왼쪽 수납장 → ②③ 아래쪽 수납장 → ④ 냉장실 → ⑤ 냉동실
+      </div>
+      <div class="mb-4">
+        <span class="inline-block align-middle text-lg mr-1">🚨</span>
+        미리 준비해둘 것 <span class="text-gray-500">(선택사항)</span>
+        <ul class="list-disc pl-6 mt-2">
+          <li>키친타올 또는 휴지</li>
+          <li>다진마늘: 미리 다져서 얼음통에 얼려두기</li>
+          <li>양파, 파, 청양고추도 매번 자르기 귀찮으면 미리 한 번에 다 잘라서 얼려두기, 밥도 1인분씩, 버터도 한 스푼 정도씩 소분해서 얼려두기</li>
+        </ul>
+      </div>
+      <div class="text-blue-600 font-semibold mt-2">💧 : 손에 물 묻히는 작업</div>
+    </div>
+  </div>
+  <!-- 플로우 순서도 섹션 -->
+  <div class="w-full min-h-[300px] flex flow-lg-row items-center justify-center bg-[#2D1F16] py-16">
+    <div class="flex flow-lg-row items-center gap-3">
+      <div class="w-[215px] h-14 flex items-center justify-center bg-white text-[#2D1F16] font-medium rounded-full mb-2 flow-lg-mb0 shadow">재료 꺼내기</div>
+      <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-v">↓</span>
+      <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-h">→</span>
+      <div class="w-[215px] h-14 flex items-center justify-center bg-[#7B726A] text-white font-medium rounded-full mb-2 flow-lg-mb0">양념 만들기</div>
+      <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-v">↓</span>
+      <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-h">→</span>
+      <div class="w-[215px] h-14 flex items-center justify-center bg-[#7B726A] text-white font-medium rounded-full mb-2 flow-lg-mb0">재료 손질</div>
+      <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-v">↓</span>
+      <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-h">→</span>
+      <div class="w-[215px] h-14 flex items-center justify-center bg-[#7B726A] text-white font-medium rounded-full">조리</div>
+    </div>
+  </div>
+  <!-- 주방/냉장고 + 텍스트 섹션 -->
+  <div class="w-full bg-[#F6F4EE] flex flex-col items-center pt-0">
+    <img src="img/test2.png" alt="주방과 냉장고" class="w-full max-w-2xl" />
+    <div class="w-full mx-auto">
+      <div class="border-b border-[#e0ded9] py-16">
+        <div class="text-center text-4xl text-[#37332F] font-normal">숟가락</div>
+      </div>
+      <div class="py-16">
+        <div class="text-center text-4xl text-[#37332F] font-normal">종이컵</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
