@@ -52,11 +52,10 @@
 <body class="bg-[#FAF9F6] min-h-screen flex flex-col items-center pb-8">
   <!-- 상단 이미지 -->
   <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini/00.jpg" alt="test" class="w-full h-64 object-cover shadow" />
-  
   <!-- 메인 컨텐츠 섹션 -->
-  <div class="w-full max-w-[700px] mx-auto">
+  <div class="w-full max-w-[700px] py-14 px-6 mx-auto">
     <!-- intro 간략 소개 -->
-    <div class="flex flex-col items-center py-14">
+    <div class="flex flex-col items-center">
       <!-- 제목 -->
       <h1 class="text-4xl font-bold text-gray-800 mb-4 tracking-wide">애호박 볶음</h1>
       <!-- 정보 바 -->
@@ -68,12 +67,12 @@
         <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">schedule</span> 20분</div>
       </div>
       <!-- 설명 -->
-      <div class="text-center text-lg text-gray-700 mb-2">
+      <div class="text-center text-lg text-gray-700 mb-5">
         <span class="text-red-600 font-semibold">레시피 따라해보다가 방금 어디까지 봤는지 헷갈렸던 사람 손 <span class='inline-block'>🖐</span></span><br />
         내가 요리할 때 보려고 큰 글씨로, 프로세스를 잘게 쪼개어 적어둔 레시피
       </div>
       <!-- 하단 정보 -->
-      <div class="text-center text-base text-gray-500 mt-4">
+      <div class="text-center text-base text-gray-500 pb-10">
         넉넉한 양 | 15분 | 레시피 참고: <a href="https://www.youtube.com/watch?v=6JMzS_dzT5Q" target="_blank" rel="noopener noreferrer" class="font-roboto text-blue-600 hover:underline">@이남자의cook</a>
       </div>
       <!-- 구글 아이콘 폰트 -->
@@ -83,7 +82,7 @@
     <div class="w-full flex flex-col items-center">
       <!-- 주방/냉장고 이미지 (예시 이미지 사용) -->
       <div class="w-full">
-        <img src="img/test.png" alt="주방과 냉장고" class="w-full rounded-lg shadow" />
+        <img src="img/kitchen 부엌수납장00.png" alt="주방과 냉장고" class="w-full rounded-lg shadow" />
       </div>
       <!-- 주방/냉장고 관련 안내 텍스트 -->
       <div class="w-full bg-[#FAF9F6] py-14 text-gray-800 text-lg">
@@ -120,8 +119,8 @@
       </div>
     </div>
   </div>
-  <!-- 플로우 순서도 섹션 1 -->
-  <div class="w-full min-h-[180px] flex flow-lg-row items-center justify-center bg-[#2D1F16]">
+  <!-- 플로우 순서도 섹션 1: 재료 꺼내기 -->
+  <div class="w-full flex flow-lg-row items-center justify-center bg-[#2D1F16] py-8">
     <div class="flex flow-lg-row items-center gap-2">
       <div class="w-[150px] h-14 flex items-center justify-center bg-white text-[#2D1F16] font-medium rounded-full mb-2 flow-lg-mb0 shadow">재료 꺼내기</div>
       <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-v">↓</span>
@@ -135,75 +134,87 @@
       <div class="w-[150px] h-14 flex items-center justify-center bg-white text-[#2D1F16] font-medium rounded-full shadow opacity-50">조리</div>
     </div>
   </div>
-  <!-- 플로우 순서도 1 설명섹션 -->
-  <div class="w-full bg-[#F6F4EE] flex flex-col items-center pt-0">
-    <!-- 세트 1 윗쪽 수납장 -->
-    <div class="w-full bg-black">
-      <img src="img/test.png" alt="주방과 냉장고" class="w-full max-w-[700px] mx-auto" />
-    </div>
-    <div class="w-full mx-auto">
-      <div class="border-b border-[#e0ded9] py-16">
-        <div class="text-center text-4xl text-[#37332F] font-normal">숟가락</div>
-      </div>
-      <div class="py-16">
-        <div class="text-center text-4xl text-[#37332F] font-normal">종이컵</div>
-      </div>
-    </div>
+  <!-- 플로우 순서도 1 설명섹션: 재료 꺼내기 -->
+  <div class="w-full mx-auto">
+    <div class="w-full flex flex-col items-center pt-0">
 
-    <!-- 세트 2 아랫쪽 수납장 -->
-    <div class="w-full bg-black">
-      <img src="img/test.png" alt="주방과 냉장고" class="w-full max-w-[700px] mx-auto" />
-    </div>
-    <div class="w-full mx-auto">
-      <div class="border-b border-[#e0ded9] py-16">
-        <div class="text-center text-4xl text-[#37332F] font-normal">숟가락</div>
-      </div>
-      <div class="py-16">
-        <div class="text-center text-4xl text-[#37332F] font-normal">종이컵</div>
-      </div>
-    </div>
+      <!-- 세트 1 윗쪽 수납장 -->
+      <div class="w-full px-5 flex flex-col md:flex-row flex-wrap gap-4 justify-center">
+        <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg my-14">
+          <img src="img/kitchen 부엌수납장01.png" alt="주방과 냉장고" class="w-full mx-auto"/>
+          <div class="w-full mx-auto p-8">
+            <span class="inline-block align-middle text-lg mr-1">📌</span>
+            <span class="font-bold">윗쪽 선반</span>
+            <ul class="list-disc pl-6 mt-2">
+              <li>숟가락</li>
+              <li>종이컵</li>
+            </ul>
+          </div>
+        </div>
 
-    <!-- 세트 3 아랫쪽 수납장 -->
-    <div class="w-full bg-black">
-      <img src="img/test.png" alt="주방과 냉장고" class="w-full max-w-[700px] mx-auto" />
-    </div>
-    <div class="w-full mx-auto">
-      <div class="border-b border-[#e0ded9] py-16">
-        <div class="text-center text-4xl text-[#37332F] font-normal">숟가락</div>
-      </div>
-      <div class="py-16">
-        <div class="text-center text-4xl text-[#37332F] font-normal">종이컵</div>
-      </div>
-    </div>
+        <!-- 세트 2 아랫쪽 수납장 -->
+        <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg my-14">
+          <img src="img/kitchen 부엌수납장02.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
+          <div class="w-full mx-auto p-8">
+            <span class="inline-block align-middle text-lg mr-1">📌</span>
+            <span class="font-bold">아랫쪽 선반1</span>
+            <ul class="list-disc pl-6 mt-2">
+              <li>양조간장 (진간장)</li>
+              <li>설탕</li>
+              <li>소금</li>
+              <li>식초 (또는 매실액)</li>
+              <li>통깨</li>
+              <li>식용유</li>
+              <li>물</li>
+            </ul>
+          </div>
+        </div>
 
-    <!-- 세트 4 냉장실 -->
-    <div class="w-full bg-black">
-      <img src="img/test.png" alt="주방과 냉장고" class="w-full max-w-[700px] mx-auto" />
-    </div>
-    <div class="w-full mx-auto">
-      <div class="border-b border-[#e0ded9] py-16">
-        <div class="text-center text-4xl text-[#37332F] font-normal">숟가락</div>
-      </div>
-      <div class="py-16">
-        <div class="text-center text-4xl text-[#37332F] font-normal">종이컵</div>
-      </div>
-    </div>
+        <!-- 세트 3 아랫쪽 수납장 -->
+        <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg my-14">
+          <img src="img/kitchen 부엌수납장03.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
+          <div class="w-full mx-auto p-8">
+            <span class="inline-block align-middle text-lg mr-1">📌</span>
+            <span class="font-bold">아랫쪽 선반2</span>
+            <ul class="list-disc pl-6 mt-2">
+              <li>도마</li>
+              <li>칼</li>
+              <li>프라이팬</li>
+            </ul>
+          </div>
+        </div>
 
-    <!-- 세트 5 냉동실 -->
-    <div class="w-full bg-black">
-      <img src="img/test.png" alt="주방과 냉장고" class="w-full max-w-[700px] mx-auto" />
-    </div>
-    <div class="w-full mx-auto">
-      <div class="border-b border-[#e0ded9] py-16">
-        <div class="text-center text-4xl text-[#37332F] font-normal">숟가락</div>
-      </div>
-      <div class="py-16">
-        <div class="text-center text-4xl text-[#37332F] font-normal">종이컵</div>
+        <!-- 세트 4 냉장실 -->
+        <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg my-14">
+          <img src="img/kitchen 부엌수납장04.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
+          <div class="w-full mx-auto p-8">
+            <span class="inline-block align-middle text-lg mr-1">📌</span>
+            <span class="font-bold">냉장실</span>
+            <ul class="list-disc pl-6 mt-2">
+              <li>애호박 2개</li>
+              <li>들기름 (또는 참기름)</li>
+              <li>양파 1개</li>
+              <li>청양고추 2개</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 세트 5 냉동실 -->
+        <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg my-14">
+          <img src="img/kitchen 부엌수납장05.png" alt="주방과 냉장고" class="w-full mx-auto" />
+          <div class="w-full mx-auto p-8">
+            <span class="inline-block align-middle text-lg mr-1">📌</span>
+            <span class="font-bold">냉동실</span>
+            <ul class="list-disc pl-6 mt-2">
+              <li>다진마늘 1T</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <!-- 플로우 순서도 섹션 2 -->
-  <div class="w-full min-h-[180px] flex flow-lg-row items-center justify-center bg-[#2D1F16]">
+  <!-- 플로우 순서도 섹션 2: 양념 만들기 -->
+  <div class="w-full flex flow-lg-row items-center justify-center bg-[#2D1F16] py-8">
     <div class="flex flow-lg-row items-center gap-2">
       <div class="w-[150px] h-14 flex items-center justify-center bg-white text-[#2D1F16] font-medium rounded-full mb-2 flow-lg-mb0 shadow opacity-50">재료 꺼내기</div>
       <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-v">↓</span>
@@ -217,19 +228,27 @@
       <div class="w-[150px] h-14 flex items-center justify-center bg-white text-[#2D1F16] font-medium rounded-full shadow opacity-50">조리</div>
     </div>
   </div>
-  <!-- 플로우 순서도 2 설명섹션 -->
-  <div class="w-full bg-[#F6F4EE] flex flex-col items-center pt-0">
-    <div class="w-full mx-auto">
-      <div class="border-b border-[#e0ded9] py-16">
-        <div class="text-center text-4xl text-[#37332F] font-normal">숟가락</div>
-      </div>
-      <div class="py-16">
-        <div class="text-center text-4xl text-[#37332F] font-normal">종이컵</div>
+  <!-- 플로우 순서도 2 설명섹션: 양념 만들기 -->
+  <div class="w-full max-w-[700px] mx-auto">
+    <div class="w-full flex flex-col items-center pt-0">
+      <div class="w-full mx-auto">
+        <div class="border-b border-[#e0ded9] py-16">
+          <div class="text-center text-4xl text-[#37332F] font-normal">종이컵에 설탕 1T 넣기</div>
+        </div>
+        <div class="border-b border-[#e0ded9] py-16">
+          <div class="text-center text-4xl text-[#37332F] font-normal">양조간장 8T</div>
+        </div>
+        <div class="border-b border-[#e0ded9] py-16">
+          <div class="text-center text-4xl text-[#37332F] font-normal">식초 2T</div>
+        </div>
+        <div class="border-b border-[#e0ded9] py-16">
+          <div class="text-center text-4xl text-[#37332F] font-normal">숟가락으로 잘 섞어주기</div>
+        </div>
       </div>
     </div>
   </div>
-  <!-- 플로우 순서도 섹션 3 -->
-  <div class="w-full min-h-[180px] flex flow-lg-row items-center justify-center bg-[#2D1F16]">
+  <!-- 플로우 순서도 섹션 3: 재료 손질 -->
+  <div class="w-full flex flow-lg-row items-center justify-center bg-[#2D1F16] py-8">
     <div class="flex flow-lg-row items-center gap-2">
       <div class="w-[150px] h-14 flex items-center justify-center bg-white text-[#2D1F16] font-medium rounded-full mb-2 flow-lg-mb0 shadow opacity-50">재료 꺼내기</div>
       <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-v">↓</span>
@@ -243,41 +262,56 @@
       <div class="w-[150px] h-14 flex items-center justify-center bg-white text-[#2D1F16] font-medium rounded-full shadow opacity-50">조리</div>
     </div>
   </div>
-  <!-- 플로우 순서도 3 설명섹션 -->
-  <div class="w-full bg-[#F6F4EE] flex flex-col items-center pt-0">
-    <div class="w-full mx-auto">
-      <div class="border-b border-[#e0ded9] py-16">
-        <div class="text-center text-4xl text-[#37332F] font-normal">숟가락</div>
-      </div>
-      <div class="py-16">
-        <div class="text-center text-4xl text-[#37332F] font-normal">종이컵</div>
+  <!-- 플로우 순서도 3 설명섹션: 재료 손질 -->
+  <div class="w-full max-w-[700px] mx-auto">
+    <div class="w-full flex flex-col items-center pt-0">
+      <div class="w-full mx-auto">
+        <div class="border-b border-[#e0ded9] py-16">
+          <div class="text-center text-4xl text-[#37332F] font-normal">💧 애호박 씻기</div>
+        </div>
+        <div class="border-b border-[#e0ded9] py-16">
+          <div class="text-center text-4xl text-[#37332F] font-normal">나무젓가락 두께로 채썰어주기 → 프라이팬에 넣기</div>
+        </div>
+        <div class="border-b border-[#e0ded9] py-16">
+          <div class="text-center text-4xl text-[#37332F] font-normal">소금 4꼬집 넣기</div>
+        </div>
+        <div class="border-b border-[#e0ded9] py-16">
+          <div class="text-center text-4xl text-[#37332F] font-normal">들기름 2T, 식용유 1T 두르기</div>
+        </div>
       </div>
     </div>
   </div>
-  <!-- 플로우 순서도 섹션 4 -->
-  <div class="w-full min-h-[180px] flex flow-lg-row items-center justify-center bg-[#2D1F16]">
-      <div class="flex flow-lg-row items-center gap-2">
-        <div class="w-[150px] h-14 flex items-center justify-center bg-white text-[#2D1F16] font-medium rounded-full mb-2 flow-lg-mb0 shadow opacity-50">재료 꺼내기</div>
-        <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-v">↓</span>
-        <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-h">→</span>
-        <div class="w-[150px] h-14 flex items-center justify-center bg-white text-[#2D1F16] font-medium rounded-full mb-2 flow-lg-mb0 shadow opacity-50">양념 만들기</div>
-        <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-v">↓</span>
-        <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-h">→</span>
-        <div class="w-[150px] h-14 flex items-center justify-center bg-white text-[#2D1F16] font-medium rounded-full mb-2 flow-lg-mb0 shadow opacity-50">재료 손질</div>
-        <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-v">↓</span>
-        <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-h">→</span>
-        <div class="w-[150px] h-14 flex items-center justify-center bg-white text-[#2D1F16] font-medium rounded-full shadow">조리</div>
-      </div>
+  <!-- 플로우 순서도 섹션 4: 조리 -->
+  <div class="w-full flex flow-lg-row items-center justify-center bg-[#2D1F16] py-8">
+    <div class="flex flow-lg-row items-center gap-2">
+      <div class="w-[150px] h-14 flex items-center justify-center bg-white text-[#2D1F16] font-medium rounded-full mb-2 flow-lg-mb0 shadow opacity-50">재료 꺼내기</div>
+      <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-v">↓</span>
+      <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-h">→</span>
+      <div class="w-[150px] h-14 flex items-center justify-center bg-white text-[#2D1F16] font-medium rounded-full mb-2 flow-lg-mb0 shadow opacity-50">양념 만들기</div>
+      <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-v">↓</span>
+      <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-h">→</span>
+      <div class="w-[150px] h-14 flex items-center justify-center bg-white text-[#2D1F16] font-medium rounded-full mb-2 flow-lg-mb0 shadow opacity-50">재료 손질</div>
+      <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-v">↓</span>
+      <span class="text-2xl text-[#bdb5ad] flow-lg-arrow-h">→</span>
+      <div class="w-[150px] h-14 flex items-center justify-center bg-white text-[#2D1F16] font-medium rounded-full shadow">조리</div>
+    </div>
   </div>
-  <!-- 플로우 순서도 4 설명섹션 -->
-  <div class="w-full bg-[#F6F4EE] flex flex-col items-center pt-0">
-    <div class="w-full mx-auto">
-      <div class="border-b border-[#e0ded9] py-16">
-        <div class="text-center text-4xl text-[#37332F] font-normal">숟가락</div>
-      </div>
-      <div class="py-16">
-        <div class="text-center text-4xl text-[#37332F] font-normal">종이컵</div>
-      </div>
+  <!-- 플로우 순서도 4 설명섹션: 조리 -->
+  <div class="w-full max-w-[700px] mx-auto">
+    <div class="w-full flex flex-col items-center pt-0">
+      <div class="w-full mx-auto">
+        <div class="border-b border-[#e0ded9] py-16">
+          <div class="text-center text-4xl text-[#37332F] font-normal">팬에 담겨있는 재료 볶기 (마늘, 양파, 청양고추, 애호박)</div>
+        </div>
+        <div class="border-b border-[#e0ded9] py-16">
+          <div class="text-center text-4xl text-[#37332F] font-normal">양파, 애호박이 익을 때까지 볶기</div>
+        </div>
+        <div class="border-b border-[#e0ded9] py-16">
+          <div class="text-center text-4xl text-[#37332F] font-normal">양념 넣고 좀 더 볶아주기</div>
+        </div>
+        <div class="border-b border-[#e0ded9] py-16">
+          <div class="text-center text-4xl text-[#37332F] font-normal">★ 끝! ★</div>
+        </div>
     </div>
   </div>
 </body>
