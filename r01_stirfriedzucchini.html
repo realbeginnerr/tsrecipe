@@ -81,12 +81,17 @@
         <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">person</span> 2인분
         </div>
         <span class="mx-2">|</span>
-        <div class="flex items-center gap-1 relative group">
-          <span class="material-symbols-outlined align-middle cursor-help">payments</span>
-          <span class="cursor-help">₩2,000</span>
-          <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-black/80 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity w-[300px] break-words">
+        <div class="group relative">
+          <div class="flex items-center gap-2 cursor-pointer" onclick="toggleTooltip(this)">
+            <svg class="w-5 h-5 text-[#37332F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-[#37332F] cursor-pointer">1,000원</span>
+          </div>
+          <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-black/80 text-white text-sm rounded hidden w-[300px] break-words">
             • 양파, 대파, 청양고추, 다진마늘, 깨, 간장 등 기본적인 재료들이 집에 이미 있다고 가정하고 계산한 가격임.<br>
-            • 요리에 실재로 사용된 양만큼을 계산한 가격임. 마트에서 장볼 때 지불한 금액이 아님. (예) 1만 3천원짜리 냉동 닭다리살을 구매했더라도 요리에 실재로사용된 닭다리의 양이 3천원치라면 이곳에 3천원이라고 적었음.
+            • 요리에 실재로 사용된 양만큼을 계산한 가격임. 마트에서 장볼 때 지불한 금액이 아님.<br>
+            • (예) 1만원짜리 냉동 닭다리살을 구매했더라도 요리에 실재로사용된 닭다리의 양이 1천원치라면 이곳에 1천원이라고 적었음.
           </div>
         </div>
         <span class="mx-2">|</span>
@@ -186,8 +191,8 @@
     <div class="w-full flex flex-col items-center justify-center py-24">
       <h1 class="text-4xl font-bold tracking-wide mb-4">양념 만들기</h1>
       <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
-        <span class="font-medium opacity-50">Take out ingredients <span class="opacity-50">→</span></span>
-        <span class="font-medium">✅ Make the sauce <span class="opacity-50">→ Prep the ingredients → Cook</span></span>
+        <span class="font-medium opacity-50">재료 꺼내기 <span class="opacity-50">→</span></span>
+        <span class="font-medium">✅ 양념 만들기 <span class="opacity-50">→ 재료 손질 → 조리</span></span>
       </div>
     </div>
     <!-- 양념 프로세스 -->
@@ -212,8 +217,8 @@
     <div class="w-full flex flex-col items-center justify-center py-24">
       <h1 class="text-4xl font-bold tracking-wide mb-4">재료 손질</h1>
       <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
-        <span class="font-medium opacity-50">Take out ingredients → Make the sauce <span class="opacity-50">→</span></span>
-        <span class="font-medium">✅ Prep the ingredients <span class="opacity-50">→ Cook</span></span>
+        <span class="font-medium opacity-50">재료 꺼내기 → 양념 만들기 <span class="opacity-50">→</span></span>
+        <span class="font-medium">✅ 재료 손질 <span class="opacity-50">→ 조리</span></span>
       </div>
     </div>
     <!-- 재료 손질 프로세스 -->
@@ -241,8 +246,8 @@
     <div class="w-full flex flex-col items-center justify-center py-24">
       <h1 class="text-4xl font-bold tracking-wide mb-4">조리</h1>
       <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
-        <span class="font-medium opacity-50">Take out ingredients → Make the sauce → Prep the ingredients <span class="opacity-50">→</span></span>
-        <span class="font-medium">✅ Cook</span>
+        <span class="font-medium opacity-50">재료 꺼내기 → 양념 만들기 → 재료 손질 <span class="opacity-50">→</span></span>
+        <span class="font-medium">✅ 조리</span>
       </div>
     </div>
     <!-- 조리 프로세스 -->
@@ -262,6 +267,22 @@
       </div>
     </div>
   </section>
+
+  <script>
+    function toggleTooltip(element) {
+      const tooltip = element.nextElementSibling;
+      tooltip.classList.toggle('hidden');
+    }
+
+    document.addEventListener('click', function(event) {
+      const tooltips = document.querySelectorAll('[class*="tooltip"]');
+      tooltips.forEach(tooltip => {
+        if (!tooltip.contains(event.target) && !event.target.matches('.cursor-pointer')) {
+          tooltip.classList.add('hidden');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

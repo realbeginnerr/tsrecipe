@@ -1,24 +1,34 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZC9D06H6D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZC9D06H6D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RZC9D06H6D');
-</script>
-
+    gtag('config', 'G-RZC9D06H6D');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Radish Kimchi</title>
+  <title>Shredded Radish Salad</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- 공통 스타일 -->
+  <!-- Common styles -->
   <link rel="stylesheet" href="style.css">
+  <!-- Hotjar Tracking Code for tsrecipe -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 3805153, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
   <!-- Pretendard (Korean) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
   <!-- Roboto (English, Numbers) -->
@@ -26,141 +36,307 @@
   <!-- Swiper.js CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
-    body { font-family: 'Pretendard', 'Roboto', sans-serif; }
-    .font-roboto { font-family: 'Roboto', sans-serif; }
+    body {
+      font-family: 'Pretendard', 'Roboto', sans-serif;
+    }
+
+    .font-roboto {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .step-item {
+      @apply border-b border-[#e0ded9] py-24;
+    }
+    .step-content {
+      @apply text-center text-3xl text-[#37332F] font-normal;
+    }
+    .step-padding {
+      @apply px-4;
+    }
   </style>
 </head>
-<body class="bg-[#FAF9F6] min-h-screen flex flex-col items-center">
-  <!-- 상단 바 -->
+
+<body class="min-h-screen flex flex-col items-center">
+  <!-- Top bar -->
   <header class="h-12 w-full flex items-center justify-between px-4 sticky top-0 bg-white z-20 border-b">
-    <a href="index.html" class="flex items-center justify-center w-8 h-8" aria-label="홈으로 이동">
+    <a href="index.html" class="flex items-center justify-center w-8 h-8" aria-label="Go to home">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-gray-700">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M4.5 10.5V19a2 2 0 002 2h2.5a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1H17.5a2 2 0 002-2v-8.5" />
       </svg>
     </a>
-    <h1 class="text-base font-medium">Radish Kimchi</h1>
+    <h1 class="text-base font-medium">Shredded Radish Salad</h1>
     <div class="w-8"></div>
   </header>
-  <!-- 이미지 리스트 -->
-  <main class="w-full max-w-md mx-auto flex flex-col gap-8 items-center mt-2 mb-28">
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/01.png" alt="radish kimchi image1" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="0" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/02.png" alt="radish kimchi image2" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="1" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/03.png" alt="radish kimchi image3" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="2" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/04.png" alt="radish kimchi image4" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="3" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/05.png" alt="radish kimchi image5" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="4" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/06.png" alt="radish kimchi image6" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="5" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/07.png" alt="radish kimchi image7" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="6" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/08.png" alt="radish kimchi image8" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="7" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/09.png" alt="radish kimchi image9" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="8" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/10.png" alt="radish kimchi image10" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="9" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/11.png" alt="radish kimchi image11" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="10" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/12.png" alt="radish kimchi image12" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="11" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/13.png" alt="radish kimchi image13" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="12" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/14.png" alt="radish kimchi image14" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="13" />
-  </main>
-  <!-- Swiper 갤러리 모달 -->
-  <div id="gallery-modal" class="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center hidden">
-    <div class="relative w-full h-full flex items-center justify-center">
-      <button id="close-modal" class="absolute top-4 right-4 text-white text-3xl z-50">&times;</button>
-      <div class="w-full max-w-2xl h-[60vh] sm:h-[80vh] flex items-center">
-        <!-- Swiper -->
-        <div class="swiper w-full h-full">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/01.png" alt="radish kimchi image1" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/02.png" alt="radish kimchi image2" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/03.png" alt="radish kimchi image3" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/04.png" alt="radish kimchi image4" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/05.png" alt="radish kimchi image5" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/06.png" alt="radish kimchi image6" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/07.png" alt="radish kimchi image7" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/08.png" alt="radish kimchi image8" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/09.png" alt="radish kimchi image9" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/10.png" alt="radish kimchi image10" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/11.png" alt="radish kimchi image11" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/12.png" alt="radish kimchi image12" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/13.png" alt="radish kimchi image13" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish_eng/14.png" alt="radish kimchi image14" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-
+  <!-- Top image -->
+  <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/00.jpg" alt="Shredded Radish Salad"
+    class="w-full h-80 object-cover shadow" />
+  <!-- Main content section -->
+  <div class="w-full max-w-[700px] py-24 mx-auto">
+    <!-- intro brief introduction -->
+    <div class="flex flex-col items-center">
+      <!-- Title -->
+      <h1 class="text-4xl font-bold text-gray-800 mb-5 tracking-wide">Shredded Radish Salad</h1>
+      <!-- Info bar -->
+      <div class="flex flex-wrap justify-center items-center gap-4 text-lg text-gray-700 mb-5">
+        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">person</span> Servings: 8+
+        </div>
+        <span class="mx-2">|</span>
+        <div class="flex items-center gap-1 relative group">
+          <span class="material-symbols-outlined align-middle cursor-pointer" onclick="toggleTooltip(this)">payments</span>
+          <span class="cursor-pointer" onclick="toggleTooltip(this)">$2</span>
+          <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-black/80 text-white text-sm rounded hidden w-[300px] break-words">
+            • Price calculated assuming basic ingredients like onions, green onions, red chili peppers, minced garlic, sesame seeds, soy sauce are already at home.<br>
+            • Price calculated based on the actual amount used in the recipe, not the purchase price.<br>
+            • (Example) Even if you bought frozen chicken thigh for $10, if you only used $1 worth in the recipe, it's listed as $1 here.
           </div>
-          <!-- Add Arrows -->
-          <div class="swiper-button-next text-white"></div>
-          <div class="swiper-button-prev text-white"></div>
+        </div>
+        <span class="mx-2">|</span>
+        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">schedule</span> 40 mins
+        </div>
+      </div>
+      <!-- Bottom info -->
+      <div class="text-center text-base text-gray-500">
+        Recipe reference: <a href="https://www.youtube.com/watch?v=6JMzS_dzT5Q" target="_blank"
+          rel="noopener noreferrer" class="font-roboto text-blue-600 hover:underline">@요리왕비룡</a>
+      </div>
+      <!-- Google icon font -->
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    </div>
+  </div>
+  <!-- Get ingredients section -->
+  <section class="w-full bg-[#F5F5F7]">
+    <div class="w-full flex flex-col items-center justify-center py-24">
+      <h1 class="text-4xl font-bold tracking-wide mb-4">Take out the ingredients</h1>
+      <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
+        <span class="font-medium">✅ Take out the ingredients <span class="opacity-50">→ Make the sauce → Prep the ingredients → Mix</span></span>
+      </div>
+    </div>
+    <!-- Ingredient sets -->
+    <div class="w-full px-5 flex flex-col md:flex-row flex-wrap gap-4 justify-center pb-24">
+      <!-- Set 1: Upper cabinet -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장01.png" alt="Kitchen and refrigerator" class="w-full mx-auto" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">① Upper shelf</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>Automatic shredder (or manual shredder)</li>
+            <li>2 plastic gloves</li>
+            <li>1 spoon</li>
+            <li>Side dish container (large enough to hold the salad)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Set 2: Lower cabinet -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장02.png" alt="Kitchen and refrigerator" class="w-full mx-auto bg-black" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">② Lower shelf</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>Shredder (for peeling radish)</li>
+            <li>Scale</li>
+            <li>Salt, Sugar</li>
+            <li>Vinegar (or plum extract)</li>
+            <li>MSG (optional)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Set 3: Lower cabinet -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장03.png" alt="Kitchen and refrigerator" class="w-full mx-auto bg-black" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">③ Lower shelf</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>Large bowl</li>
+            <li>Wide tray</li>
+            <li>Cutting board, Knife</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Set 4: Refrigerator -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장04.png" alt="Kitchen and refrigerator" class="w-full mx-auto bg-black" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">④ Refrigerator</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>1/2 radish</li>
+            <li>Red pepper flakes (coarse kimchi pepper flakes. Fine pepper flakes are okay)</li>
+            <li>Anchovy sauce (fish sauce is okay)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Set 5: Freezer -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장05.png" alt="Kitchen and refrigerator" class="w-full mx-auto" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">⑤ Freezer</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>Chives (green onions are okay)</li>
+            <li>2T minced garlic</li>
+            <li>1/2T minced ginger</li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Swiper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </section>
+
+  <!-- Prepare ingredients section -->
+  <section class="w-full">
+    <div class="w-full flex flex-col items-center justify-center py-24">
+      <h1 class="text-4xl font-bold tracking-wide mb-4">Prep the ingredients</h1>
+      <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
+        <span class="font-medium opacity-50">Take out the ingredients <span class="opacity-50">→</span></span>
+        <span class="font-medium">✅ Prep the ingredients <span class="opacity-50">→ Make the sauce → Mix</span></span>
+      </div>
+    </div>
+    <!-- Preparation process -->
+    <div class="w-full mx-auto">
+      <div class="border border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Plug in automatic shredder and place tray in front</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">💧Wash chives</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">💧Wash dirt off radish</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Cut off top with knife and peel skin with manual shredder</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">💧Wash off small remaining skin pieces</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Weigh</div>
+        <div class="text-center text-[#37332F] font-normal mt-4 px-4">(This recipe is based on 800-850g. Adjust seasoning amounts if using more or less)</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Shred with automatic shredder</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Put in large bowl</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Add 1T salt, 2T sugar to bowl</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Put on plastic gloves and mix</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Set 15-minute timer</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Cut 3 chives into 5cm lengths</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Make seasoning section -->
+  <section class="w-full bg-[#F5F5F7]">
+    <div class="w-full flex flex-col items-center justify-center py-24">
+      <h1 class="text-4xl font-bold tracking-wide mb-4">Make the sauce</h1>
+      <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
+        <span class="font-medium opacity-50">Take out the ingredients → Prep the ingredients <span class="opacity-50">→</span></span>
+        <span class="font-medium">✅ Make the sauce <span class="opacity-50">→ Mix</span></span>
+      </div>
+    </div>
+    <!-- Seasoning process -->
+    <div class="w-full mx-auto">
+      <div class="border border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">★ Mix these ingredients in the side dish container with a spoon ★</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">2T red pepper flakes</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">2T minced garlic</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">1/2T sugar</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">1T vinegar</div>
+        <div class="text-center text-[#37332F] font-normal mt-4 px-4">(or plum extract)</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">2T anchovy sauce</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">1/2T minced ginger</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">1/4T MSG</div>
+        <div class="text-center text-[#37332F] font-normal mt-4 px-4">(optional)</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Add cut chives</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Mix well with spoon</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">When 15-minute timer rings, put on gloves and mix a few times</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Set 15-minute timer again</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">When 15-minute timer rings, put on gloves and squeeze out excess water</div>
+        <div class="text-center text-[#37332F] font-normal mt-4 px-4">After squeezing, let it sit in the side dish container for a while</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Rinse the bowl used for salting</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mixing section -->
+  <section class="w-full">
+    <div class="w-full flex flex-col items-center justify-center py-24">
+      <h1 class="text-4xl font-bold tracking-wide mb-4">Mix</h1>
+      <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
+        <span class="font-medium opacity-50">Take out the ingredients → Prep the ingredients → Make the sauce <span class="opacity-50">→</span></span>
+        <span class="font-medium">✅ Mix</span>
+      </div>
+    </div>
+    <!-- Mixing process -->
+    <div class="w-full mx-auto">
+      <div class="border border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Put salted radish and seasoning in bowl</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Mix well with gloves on</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Put in side dish container and let ferment at room temperature for one day before eating</div>
+        <div class="text-center text-[#37332F] font-normal mt-4 px-4">(Can be refrigerated immediately if preferred)</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">★ Enjoy! ★</div>
+      </div>
+    </div>
+  </section>
+
   <script>
-    let swiper;
-    const modal = document.getElementById('gallery-modal');
-    const closeBtn = document.getElementById('close-modal');
-    const images = document.querySelectorAll('main img[data-idx]');
-    // 이미지 클릭 시 모달 오픈 + 해당 인덱스로 이동
-    images.forEach((img, idx) => {
-      img.addEventListener('click', () => {
-        modal.classList.remove('hidden');
-        if (!swiper) {
-          swiper = new Swiper('.swiper', {
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-            loop: false,
-            initialSlide: idx,
-          });
-        } else {
-          swiper.slideTo(idx, 0);
+    function toggleTooltip(element) {
+      const tooltip = element.parentElement.querySelector('div');
+      tooltip.classList.toggle('hidden');
+    }
+
+    // Close tooltip when clicking outside
+    document.addEventListener('click', function(event) {
+      const tooltips = document.querySelectorAll('.group > div');
+      tooltips.forEach(tooltip => {
+        if (!tooltip.parentElement.contains(event.target)) {
+          tooltip.classList.add('hidden');
         }
       });
     });
-    // 닫기 버튼
-    closeBtn.addEventListener('click', () => {
-      modal.classList.add('hidden');
-    });
-    // 바깥 클릭 시 닫기
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.add('hidden');
-      }
-    });
-    // 상단바 뒤로가기(홈 이동) 버튼 클릭 시 스크롤 위치 저장 및 직접 이동
-    const backBtn = document.querySelector('header a[href="index.html"]');
-    if (backBtn) {
-      backBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        sessionStorage.setItem('scrollY', window.scrollY);
-        window.location.href = this.getAttribute('href');
-      });
-    }
   </script>
 </body>
+
 </html>

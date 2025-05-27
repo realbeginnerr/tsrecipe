@@ -59,7 +59,7 @@
 <body class="min-h-screen flex flex-col items-center">
   <!-- 상단 바 -->
   <header class="h-12 w-full flex items-center justify-between px-4 sticky top-0 bg-white z-20 border-b">
-    <a href="index.html" class="flex items-center justify-center w-8 h-8" aria-label="홈으로 이동">
+    <a href="index.html" class="flex items-center justify-center w-8 h-8" aria-label="Go to Home">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-gray-700">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M4.5 10.5V19a2 2 0 002 2h2.5a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1H17.5a2 2 0 002-2v-8.5" />
       </svg>
@@ -81,13 +81,17 @@
         <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">person</span>Servings 2
         </div>
         <span class="mx-2">|</span>
-        <div class="flex items-center gap-1 relative group">
-          <span class="material-symbols-outlined align-middle cursor-help">payments</span>
-          <span class="cursor-help">$2</span>
-          <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-black/80 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity w-[300px] break-words">
-            • Prices assume you already have basics like onions, green onions, chili peppers, garlic, sesame seeds, and soy sauce at home.<br>
-            • Only the amount actually used in cooking is written — not the full price paid at the store. (e.g. if chicken costs $13 but only $3 worth is used, $3 is written.)<br>
-            • Based on Korean prices.<br>
+        <div class="group relative">
+          <div class="flex items-center gap-2 cursor-pointer" onclick="toggleTooltip(this)">
+            <svg class="w-5 h-5 text-[#37332F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-[#37332F] cursor-pointer">$1</span>
+          </div>
+          <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-black/80 text-white text-sm rounded hidden w-[300px] break-words">
+            • The price is calculated assuming basic ingredients like onions, green onions, chili peppers, minced garlic, sesame seeds, and soy sauce are already available at home.<br>
+            • The price reflects the actual amount used in the recipe, not the amount paid at the store.<br>
+            • (Example) Even if you bought a $10 pack of frozen chicken thighs, if you only used $1 worth in the recipe, it would be listed as $1 here.
           </div>
         </div>
         <span class="mx-2">|</span>
@@ -108,14 +112,14 @@
     <div class="w-full flex flex-col items-center justify-center py-24">
       <h1 class="text-4xl font-bold tracking-wide mb-4">Take out ingredients</h1>
       <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
-        <span class="font-medium">✅ Take out ingredients <span class="opacity-50">→ Make the sauce → Prep the ingredients → Cook</span></span>
+        <span class="font-medium">✅ Take out ingredients <span class="opacity-50">→ Make the sauce → Prep ingredients → Cook</span></span>
       </div>
     </div>
     <!-- 재료 세트들 -->
     <div class="w-full px-5 flex flex-col md:flex-row flex-wrap gap-4 justify-center pb-24">
       <!-- 세트 1: 윗쪽 수납장 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
-        <img src="img/kitchen 부엌수납장01.png" alt="Kitchen and Refrigerator" class="w-full mx-auto" />
+        <img src="img/kitchen 부엌수납장01.png" alt="주방과 냉장고" class="w-full mx-auto" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">① Top Shelf</span>
           <ul class="list-disc pl-6 mt-2">
@@ -127,7 +131,7 @@
 
       <!-- 세트 2: 아랫쪽 수납장 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
-        <img src="img/kitchen 부엌수납장02.png" alt="Kitchen and Refrigerator" class="w-full mx-auto bg-black" />
+        <img src="img/kitchen 부엌수납장02.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">② Bottom Shelf</span>
           <ul class="list-disc pl-6 mt-2">
@@ -144,7 +148,7 @@
 
       <!-- 세트 3: 아랫쪽 수납장 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
-        <img src="img/kitchen 부엌수납장03.png" alt="Kitchen and Refrigerator" class="w-full mx-auto bg-black" />
+        <img src="img/kitchen 부엌수납장03.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">③ Bottom Shelf</span>
           <ul class="list-disc pl-6 mt-2">
@@ -157,21 +161,21 @@
 
       <!-- 세트 4: 냉장실 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
-        <img src="img/kitchen 부엌수납장04.png" alt="Kitchen and Refrigerator" class="w-full mx-auto bg-black" />
+        <img src="img/kitchen 부엌수납장04.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">④ Refrigerator</span>
           <ul class="list-disc pl-6 mt-2">
-            <li>2 Zucchinis 🛒</li>
-            <li>Perilla Oil (or Sesame Oil)</li>
-            <li>1 Onion</li>
-            <li>2 Green Chili Peppers</li>
+            <li>Zucchinis 2</li>
+            <li>Perilla Oil (or Sesame Oil) 2T</li>
+            <li>Onion 1</li>
+            <li>Green Chili Peppers 2</li>
           </ul>
         </div>
       </div>
 
       <!-- 세트 5: 냉동실 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
-        <img src="img/kitchen 부엌수납장05.png" alt="Kitchen and Refrigerator" class="w-full mx-auto" />
+        <img src="img/kitchen 부엌수납장05.png" alt="주방과 냉장고" class="w-full mx-auto" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">⑤ Freezer</span>
           <ul class="list-disc pl-6 mt-2">
@@ -186,14 +190,9 @@
   <section class="w-full">
     <div class="w-full flex flex-col items-center justify-center py-24">
       <h1 class="text-4xl font-bold tracking-wide mb-4">Make the Sauce</h1>
-      <div class="flex flex-row items-center gap-2">
-        <div class="flex items-center justify-center font-medium opacity-50">Take out ingredients</div>
-        <span class="text-lg text-[#bdb5ad]">→</span>
-        <div class="flex items-center justify-center font-medium">✅ Make the sauce</div>
-        <span class="text-lg text-[#bdb5ad]">→</span>
-        <div class="flex items-center justify-center font-medium opacity-50">Prep ingredients</div>
-        <span class="text-lg text-[#bdb5ad]">→</span>
-        <div class="flex items-center justify-center font-medium opacity-50">Cook</div>
+      <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
+        <span class="font-medium opacity-50">Take out ingredients <span class="opacity-50">→</span></span>
+        <span class="font-medium">✅ Make the sauce <span class="opacity-50">→ Prep ingredients → Cook</span></span>
       </div>
     </div>
     <!-- 양념 프로세스 -->
@@ -217,14 +216,9 @@
   <section class="w-full bg-[#F5F5F7]">
     <div class="w-full flex flex-col items-center justify-center py-24">
       <h1 class="text-4xl font-bold tracking-wide mb-4">Prep Ingredients</h1>
-      <div class="flex flex-row items-center gap-2">
-        <div class="flex items-center justify-center font-medium opacity-50">Take out ingredients</div>
-        <span class="text-lg text-[#bdb5ad]">→</span>
-        <div class="flex items-center justify-center font-medium opacity-50">Make the sauce</div>
-        <span class="text-lg text-[#bdb5ad]">→</span>
-        <div class="flex items-center justify-center font-medium">✅ Prep ingredients</div>
-        <span class="text-lg text-[#bdb5ad]">→</span>
-        <div class="flex items-center justify-center font-medium opacity-50">Cook</div>
+      <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
+        <span class="font-medium opacity-50">Take out ingredients → Make the sauce <span class="opacity-50">→</span></span>
+        <span class="font-medium">✅ Prep ingredients <span class="opacity-50">→ Cook</span></span>
       </div>
     </div>
     <!-- 재료 손질 프로세스 -->
@@ -239,7 +233,7 @@
         <div class="text-center text-3xl text-[#37332F] font-normal px-4">Put in frying pan</div>
       </div>
       <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Add 4 pinches of salt</div>
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Add salt 4 pinches</div>
       </div>
       <div class="border-b border-[#e0ded9] py-24">
         <div class="text-center text-3xl text-[#37332F] font-normal px-4">Add perilla oil 2T and cooking oil 1T</div>
@@ -251,14 +245,9 @@
   <section class="w-full">
     <div class="w-full flex flex-col items-center justify-center py-24">
       <h1 class="text-4xl font-bold tracking-wide mb-4">Cook</h1>
-      <div class="flex flex-row items-center gap-2">
-        <div class="flex items-center justify-center font-medium opacity-50">Take out ingredients</div>
-        <span class="text-lg text-[#bdb5ad]">→</span>
-        <div class="flex items-center justify-center font-medium opacity-50">Make the sauce</div>
-        <span class="text-lg text-[#bdb5ad]">→</span>
-        <div class="flex items-center justify-center font-medium opacity-50">Prep ingredients</div>
-        <span class="text-lg text-[#bdb5ad]">→</span>
-        <div class="flex items-center justify-center font-medium">✅ Cook</div>
+      <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
+        <span class="font-medium opacity-50">Take out ingredients → Make the sauce → Prep ingredients <span class="opacity-50">→</span></span>
+        <span class="font-medium">✅ Cook</span>
       </div>
     </div>
     <!-- 조리 프로세스 -->
@@ -274,10 +263,26 @@
         <div class="text-center text-[#37332F] font-normal mt-4 px-4">When everything is cooked, turn off the heat and it's done!</div>
       </div>
       <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">★ Done! ★</div>
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">★ Enjoy! ★</div>
       </div>
     </div>
   </section>
+
+  <script>
+    function toggleTooltip(element) {
+      const tooltip = element.nextElementSibling;
+      tooltip.classList.toggle('hidden');
+    }
+
+    document.addEventListener('click', function(event) {
+      const tooltips = document.querySelectorAll('[class*="tooltip"]');
+      tooltips.forEach(tooltip => {
+        if (!tooltip.contains(event.target) && !event.target.matches('.cursor-pointer')) {
+          tooltip.classList.add('hidden');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

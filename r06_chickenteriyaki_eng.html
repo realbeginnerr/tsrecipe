@@ -162,5 +162,20 @@
       });
     }
   </script>
+  <script>
+    function toggleTooltip(element) {
+      const tooltip = element.nextElementSibling;
+      tooltip.classList.toggle('hidden');
+    }
+
+    document.addEventListener('click', function(event) {
+      const tooltips = document.querySelectorAll('[class*="tooltip"]');
+      tooltips.forEach(tooltip => {
+        if (!tooltip.contains(event.target) && !event.target.matches('.cursor-pointer')) {
+          tooltip.classList.add('hidden');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
