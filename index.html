@@ -17,6 +17,8 @@
   <title>T's recipe</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="style.css">
   <!-- Pretendard (Korean) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
   <!-- Roboto (English, Numbers) -->
@@ -70,12 +72,12 @@
   <!-- 메인 컨텐츠 -->
   <main class="w-full px-4 flex flex-col items-center gap-8 mt-2 mb-20" id="recipeList">
     <div class="w-full max-w-[1200px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-      <!-- 테스트 카드 -->
-      <a href="test.html" class="recipe-item flex flex-col items-center w-full" data-title="test" target="_blank" rel="noopener noreferrer">
-        <img src="img/test.png" alt="test" class="w-full h-40 object-cover rounded-lg mb-2" />
-        <span class="text-base font-normal mt-1">테스트</span>
-      </a>
       <!-- 브로콜리 두부 무침 -->
+      <a href="mustread.html" class="recipe-item flex flex-col items-center w-full" data-title="★필독★" target="_blank" rel="noopener noreferrer">
+        <img src="https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg" alt="★필독★" class="w-full h-40 object-cover rounded-lg mb-2" />
+        <span class="text-base font-normal mt-1">★필독★</span>
+      </a>
+      <!-- 브로콜리 두부 무침 복제 -->
       <a href="r07_broccoliseasonedtofu.html" class="recipe-item flex flex-col items-center w-full" data-title="브로콜리 두부 무침" target="_blank" rel="noopener noreferrer">
         <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r07_broccoliseasonedtofu/00.jpg" alt="브로콜리 두부 무침" class="w-full h-40 object-cover rounded-lg mb-2" />
         <span class="text-base font-normal mt-1">브로콜리 두부 무침</span>

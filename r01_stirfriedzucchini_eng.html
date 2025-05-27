@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZC9D06H6D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZC9D06H6D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RZC9D06H6D');
-</script>
-
+    gtag('config', 'G-RZC9D06H6D');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stir-fried zucchini</title>
+  <title>Stir-fried Zucchini</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="style.css">
   <!-- Hotjar Tracking Code for tsrecipe -->
   <script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:3805153,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 3805153, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
   </script>
   <!-- Pretendard (Korean) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
@@ -35,11 +36,27 @@
   <!-- Swiper.js CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
-    body { font-family: 'Pretendard', 'Roboto', sans-serif; }
-    .font-roboto { font-family: 'Roboto', sans-serif; }
+    body {
+      font-family: 'Pretendard', 'Roboto', sans-serif;
+    }
+
+    .font-roboto {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .step-item {
+      @apply border-b border-[#e0ded9] py-24;
+    }
+    .step-content {
+      @apply text-center text-3xl text-[#37332F] font-normal;
+    }
+    .step-padding {
+      @apply px-4;
+    }
   </style>
 </head>
-<body class="bg-[#FAF9F6] min-h-screen flex flex-col items-center">
+
+<body class="min-h-screen flex flex-col items-center">
   <!-- 상단 바 -->
   <header class="h-12 w-full flex items-center justify-between px-4 sticky top-0 bg-white z-20 border-b">
     <a href="index.html" class="flex items-center justify-center w-8 h-8" aria-label="홈으로 이동">
@@ -47,129 +64,220 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M4.5 10.5V19a2 2 0 002 2h2.5a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1H17.5a2 2 0 002-2v-8.5" />
       </svg>
     </a>
-    <h1 class="text-base font-medium">Stir-fried zucchini</h1>
+    <h1 class="text-base font-medium">Stir-fried Zucchini</h1>
     <div class="w-8"></div>
   </header>
-  <!-- 이미지 리스트 -->
-  <main class="w-full max-w-md mx-auto flex flex-col gap-8 items-center mt-2 mb-28">
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/01.png" alt="stir fried zucchini image1" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="0" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/02.png" alt="stir fried zucchini image2" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="1" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/03.png" alt="stir fried zucchini image3" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="2" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/04.png" alt="stir fried zucchini image4" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="3" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/05.png" alt="stir fried zucchini image5" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="4" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/06.png" alt="stir fried zucchini image6" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="5" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/07.png" alt="stir fried zucchini image7" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="6" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/08.png" alt="stir fried zucchini image8" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="7" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/09.png" alt="stir fried zucchini image9" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="8" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/10.png" alt="stir fried zucchini image10" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="9" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/11.png" alt="stir fried zucchini image11" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="10" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/12.png" alt="stir fried zucchini image12" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="11" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/13.png" alt="stir fried zucchini image13" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="12" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/14.png" alt="stir fried zucchini image14" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="13" />
-  </main>
-  <!-- Swiper 갤러리 모달 -->
-  <div id="gallery-modal" class="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center hidden">
-    <div class="relative w-full h-full flex items-center justify-center">
-      <button id="close-modal" class="absolute top-4 right-4 text-white text-3xl z-50">&times;</button>
-      <div class="w-full max-w-2xl h-[60vh] sm:h-[80vh] flex items-center">
-        <!-- Swiper -->
-        <div class="swiper w-full h-full">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/01.png" alt="stir fried zucchini image1" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/02.png" alt="stir fried zucchini image2" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/03.png" alt="stir fried zucchini image3" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/04.png" alt="stir fried zucchini image4" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/05.png" alt="stir fried zucchini image5" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/06.png" alt="stir fried zucchini image6" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/07.png" alt="stir fried zucchini image7" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/08.png" alt="stir fried zucchini image8" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/09.png" alt="stir fried zucchini image9" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/10.png" alt="stir fried zucchini image10" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/11.png" alt="stir fried zucchini image11" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/12.png" alt="stir fried zucchini image12" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/13.png" alt="stir fried zucchini image13" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini_eng/14.png" alt="stir fried zucchini image14" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-
+  <!-- 상단 이미지 -->
+  <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini/00.jpg" alt="Stir-fried Zucchini"
+    class="w-full h-80 object-cover shadow" />
+  <!-- 메인 컨텐츠 섹션 -->
+  <div class="w-full max-w-[700px] py-24 mx-auto">
+    <!-- intro 간략 소개 -->
+    <div class="flex flex-col items-center">
+      <!-- 제목 -->
+      <h1 class="text-4xl font-bold text-gray-800 mb-5 tracking-wide">Stir-fried Zucchini</h1>
+      <!-- 정보 바 -->
+      <div class="flex flex-wrap justify-center items-center gap-4 text-lg text-gray-700 mb-5">
+        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">person</span>Servings 2
+        </div>
+        <span class="mx-2">|</span>
+        <div class="flex items-center gap-1 relative group">
+          <span class="material-symbols-outlined align-middle cursor-help">payments</span>
+          <span class="cursor-help">$2</span>
+          <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-black/80 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity w-[300px] break-words">
+            • Prices assume you already have basics like onions, green onions, chili peppers, garlic, sesame seeds, and soy sauce at home.<br>
+            • Only the amount actually used in cooking is written — not the full price paid at the store. (e.g. if chicken costs $13 but only $3 worth is used, $3 is written.)<br>
+            • Based on Korean prices.<br>
           </div>
-          <!-- Add Arrows -->
-          <div class="swiper-button-next text-white"></div>
-          <div class="swiper-button-prev text-white"></div>
+        </div>
+        <span class="mx-2">|</span>
+        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">schedule</span> 20 min
+        </div>
+      </div>
+      <!-- 하단 정보 -->
+      <div class="text-center text-base text-gray-500">
+        Recipe ref: <a href="https://www.youtube.com/watch?v=6JMzS_dzT5Q" target="_blank"
+          rel="noopener noreferrer" class="font-roboto text-blue-600 hover:underline">@이남자의cook</a>
+      </div>
+      <!-- 구글 아이콘 폰트 -->
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    </div>
+  </div>
+  <!-- 재료 꺼내기 섹션 -->
+  <section class="w-full bg-[#F5F5F7]">
+    <div class="w-full flex flex-col items-center justify-center py-24">
+      <h1 class="text-4xl font-bold tracking-wide mb-4">Take out ingredients</h1>
+      <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
+        <span class="font-medium">✅ Take out ingredients <span class="opacity-50">→ Make the sauce → Prep the ingredients → Cook</span></span>
+      </div>
+    </div>
+    <!-- 재료 세트들 -->
+    <div class="w-full px-5 flex flex-col md:flex-row flex-wrap gap-4 justify-center pb-24">
+      <!-- 세트 1: 윗쪽 수납장 -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장01.png" alt="Kitchen and Refrigerator" class="w-full mx-auto" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">① Top Shelf</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>Spoon</li>
+            <li>Paper Cup</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 세트 2: 아랫쪽 수납장 -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장02.png" alt="Kitchen and Refrigerator" class="w-full mx-auto bg-black" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">② Bottom Shelf</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>Soy Sauce (Regular)</li>
+            <li>Sugar</li>
+            <li>Salt</li>
+            <li>Vinegar (or Plum Extract)</li>
+            <li>Sesame Seeds</li>
+            <li>Cooking Oil</li>
+            <li>Water</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 세트 3: 아랫쪽 수납장 -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장03.png" alt="Kitchen and Refrigerator" class="w-full mx-auto bg-black" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">③ Bottom Shelf</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>Cutting Board</li>
+            <li>Knife</li>
+            <li>Frying Pan</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 세트 4: 냉장실 -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장04.png" alt="Kitchen and Refrigerator" class="w-full mx-auto bg-black" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">④ Refrigerator</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>2 Zucchinis 🛒</li>
+            <li>Perilla Oil (or Sesame Oil)</li>
+            <li>1 Onion</li>
+            <li>2 Green Chili Peppers</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 세트 5: 냉동실 -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장05.png" alt="Kitchen and Refrigerator" class="w-full mx-auto" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">⑤ Freezer</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>Minced Garlic 1T</li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Swiper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    let swiper;
-    const modal = document.getElementById('gallery-modal');
-    const closeBtn = document.getElementById('close-modal');
-    const images = document.querySelectorAll('main img[data-idx]');
-    // 이미지 클릭 시 모달 오픈 + 해당 인덱스로 이동
-    images.forEach((img, idx) => {
-      img.addEventListener('click', () => {
-        modal.classList.remove('hidden');
-        if (!swiper) {
-          swiper = new Swiper('.swiper', {
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-            loop: false,
-            initialSlide: idx,
-          });
-        } else {
-          swiper.slideTo(idx, 0);
-        }
-      });
-    });
-    // 닫기 버튼
-    closeBtn.addEventListener('click', () => {
-      modal.classList.add('hidden');
-    });
-    // 바깥 클릭 시 닫기
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.add('hidden');
-      }
-    });
-    // 상단바 뒤로가기(홈 이동) 버튼 클릭 시 스크롤 위치 저장 및 직접 이동
-    const backBtn = document.querySelector('header a[href="index.html"]');
-    if (backBtn) {
-      backBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        sessionStorage.setItem('scrollY', window.scrollY);
-        window.location.href = this.getAttribute('href');
-      });
-    }
-  </script>
+  </section>
+
+  <!-- 양념 만들기 섹션 -->
+  <section class="w-full">
+    <div class="w-full flex flex-col items-center justify-center py-24">
+      <h1 class="text-4xl font-bold tracking-wide mb-4">Make the Sauce</h1>
+      <div class="flex flex-row items-center gap-2">
+        <div class="flex items-center justify-center font-medium opacity-50">Take out ingredients</div>
+        <span class="text-lg text-[#bdb5ad]">→</span>
+        <div class="flex items-center justify-center font-medium">✅ Make the sauce</div>
+        <span class="text-lg text-[#bdb5ad]">→</span>
+        <div class="flex items-center justify-center font-medium opacity-50">Prep ingredients</div>
+        <span class="text-lg text-[#bdb5ad]">→</span>
+        <div class="flex items-center justify-center font-medium opacity-50">Cook</div>
+      </div>
+    </div>
+    <!-- 양념 프로세스 -->
+    <div class="w-full mx-auto">
+      <div class="border border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">★ Mix all ingredients below in a cup with a spoon ★</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Sugar 1T</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Soy Sauce 8T</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Vinegar 2T</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 재료 손질 섹션 -->
+  <section class="w-full bg-[#F5F5F7]">
+    <div class="w-full flex flex-col items-center justify-center py-24">
+      <h1 class="text-4xl font-bold tracking-wide mb-4">Prep Ingredients</h1>
+      <div class="flex flex-row items-center gap-2">
+        <div class="flex items-center justify-center font-medium opacity-50">Take out ingredients</div>
+        <span class="text-lg text-[#bdb5ad]">→</span>
+        <div class="flex items-center justify-center font-medium opacity-50">Make the sauce</div>
+        <span class="text-lg text-[#bdb5ad]">→</span>
+        <div class="flex items-center justify-center font-medium">✅ Prep ingredients</div>
+        <span class="text-lg text-[#bdb5ad]">→</span>
+        <div class="flex items-center justify-center font-medium opacity-50">Cook</div>
+      </div>
+    </div>
+    <!-- 재료 손질 프로세스 -->
+    <div class="w-full mx-auto">
+      <div class="border border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">💧 Wash 2 zucchinis</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Julienne it into strips about 0.2 inches thick</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Put in frying pan</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Add 4 pinches of salt</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Add perilla oil 2T and cooking oil 1T</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 조리 섹션 -->
+  <section class="w-full">
+    <div class="w-full flex flex-col items-center justify-center py-24">
+      <h1 class="text-4xl font-bold tracking-wide mb-4">Cook</h1>
+      <div class="flex flex-row items-center gap-2">
+        <div class="flex items-center justify-center font-medium opacity-50">Take out ingredients</div>
+        <span class="text-lg text-[#bdb5ad]">→</span>
+        <div class="flex items-center justify-center font-medium opacity-50">Make the sauce</div>
+        <span class="text-lg text-[#bdb5ad]">→</span>
+        <div class="flex items-center justify-center font-medium opacity-50">Prep ingredients</div>
+        <span class="text-lg text-[#bdb5ad]">→</span>
+        <div class="flex items-center justify-center font-medium">✅ Cook</div>
+      </div>
+    </div>
+    <!-- 조리 프로세스 -->
+    <div class="w-full mx-auto">
+      <div class="border border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Stir-fry ingredients in the pan with a silicone spatula</div>
+        <div class="text-center text-[#37332F] font-normal mt-4 px-4">🔥🔥 Medium heat</div>
+        <div class="text-center text-[#37332F] font-normal mt-4 px-4">Cook until onions and zucchinis are more than half cooked and translucent</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">When onions and zucchinis are partially cooked, add the sauce and continue stir-frying</div>
+        <div class="text-center text-[#37332F] font-normal mt-4 px-4">🔥🔥 Medium heat</div>
+        <div class="text-center text-[#37332F] font-normal mt-4 px-4">When everything is cooked, turn off the heat and it's done!</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">★ Done! ★</div>
+      </div>
+    </div>
+  </section>
 </body>
+
 </html>

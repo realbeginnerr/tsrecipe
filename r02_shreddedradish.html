@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZC9D06H6D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZC9D06H6D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RZC9D06H6D');
-</script>
-
+    gtag('config', 'G-RZC9D06H6D');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>무생채</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Hotjar Tracking Code for tsrecipe -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 3805153, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
   <!-- Pretendard (Korean) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
   <!-- Roboto (English, Numbers) -->
@@ -24,11 +36,27 @@
   <!-- Swiper.js CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
-    body { font-family: 'Pretendard', 'Roboto', sans-serif; }
-    .font-roboto { font-family: 'Roboto', sans-serif; }
+    body {
+      font-family: 'Pretendard', 'Roboto', sans-serif;
+    }
+
+    .font-roboto {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .step-item {
+      @apply border-b border-[#e0ded9] py-24;
+    }
+    .step-content {
+      @apply text-center text-3xl text-[#37332F] font-normal;
+    }
+    .step-padding {
+      @apply px-4;
+    }
   </style>
 </head>
-<body class="bg-[#FAF9F6] min-h-screen flex flex-col items-center">
+
+<body class="min-h-screen flex flex-col items-center">
   <!-- 상단 바 -->
   <header class="h-12 w-full flex items-center justify-between px-4 sticky top-0 bg-white z-20 border-b">
     <a href="index.html" class="flex items-center justify-center w-8 h-8" aria-label="홈으로 이동">
@@ -39,145 +67,217 @@
     <h1 class="text-base font-medium">무생채</h1>
     <div class="w-8"></div>
   </header>
-  <!-- 이미지 리스트 -->
-  <main class="w-full max-w-md mx-auto flex flex-col gap-8 items-center mt-2 mb-28">
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/01.png" alt="무생채 이미지1" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="0" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/02.png" alt="무생채 이미지2" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="1" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/03.png" alt="무생채 이미지3" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="2" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/04.png" alt="무생채 이미지4" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="3" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/05.png" alt="무생채 이미지5" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="4" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/06.png" alt="무생채 이미지6" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="5" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/07.png" alt="무생채 이미지7" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="6" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/08.png" alt="무생채 이미지8" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="7" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/09.png" alt="무생채 이미지9" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="8" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/10.png" alt="무생채 이미지10" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="9" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/11.png" alt="무생채 이미지11" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="10" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/12.png" alt="무생채 이미지12" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="11" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/13.png" alt="무생채 이미지13" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="12" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/14.png" alt="무생채 이미지14" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="13" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/15.png" alt="무생채 이미지15" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="14" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/16.png" alt="무생채 이미지16" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="15" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/17.png" alt="무생채 이미지17" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="16" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/18.png" alt="무생채 이미지18" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="17" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/19.png" alt="무생채 이미지19" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="18" />
-  </main>
-  <!-- Swiper 갤러리 모달 -->
-  <div id="gallery-modal" class="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center hidden">
-    <div class="relative w-full h-full flex items-center justify-center">
-      <button id="close-modal" class="absolute top-4 right-4 text-white text-3xl z-50">&times;</button>
-      <div class="w-full max-w-2xl h-[60vh] sm:h-[80vh] flex items-center">
-        <!-- Swiper -->
-        <div class="swiper w-full h-full">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/01.png" alt="무생채 이미지1" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/02.png" alt="무생채 이미지2" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/03.png" alt="무생채 이미지3" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/04.png" alt="무생채 이미지4" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/05.png" alt="무생채 이미지5" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/06.png" alt="무생채 이미지6" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/07.png" alt="무생채 이미지7" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/08.png" alt="무생채 이미지8" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/09.png" alt="무생채 이미지9" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/10.png" alt="무생채 이미지10" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/11.png" alt="무생채 이미지11" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/12.png" alt="무생채 이미지12" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/13.png" alt="무생채 이미지13" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/14.png" alt="무생채 이미지14" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/15.png" alt="무생채 이미지15" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/16.png" alt="무생채 이미지16" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/17.png" alt="무생채 이미지17" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/18.png" alt="무생채 이미지18" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/19.png" alt="무생채 이미지19" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
+  <!-- 상단 이미지 -->
+  <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/00.jpg" alt="무생채"
+    class="w-full h-80 object-cover shadow" />
+  <!-- 메인 컨텐츠 섹션 -->
+  <div class="w-full max-w-[700px] py-24 mx-auto">
+    <!-- intro 간략 소개 -->
+    <div class="flex flex-col items-center">
+      <!-- 제목 -->
+      <h1 class="text-4xl font-bold text-gray-800 mb-5 tracking-wide">무생채</h1>
+      <!-- 정보 바 -->
+      <div class="flex flex-wrap justify-center items-center gap-4 text-lg text-gray-700 mb-5">
+        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">person</span> 8인분 이상
+        </div>
+        <span class="mx-2">|</span>
+        <div class="flex items-center gap-1 relative group">
+          <span class="material-symbols-outlined align-middle cursor-help">payments</span>
+          <span class="cursor-help">₩2,000</span>
+          <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-black/80 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity w-[300px] break-words">
+            • 양파, 대파, 청양고추, 다진마늘, 깨, 간장 등 기본적인 재료들이 집에 이미 있다고 가정하고 계산한 가격임.<br>
+            • 요리에 실재로 사용된 양만큼을 계산한 가격임. 마트에서 장볼 때 지불한 금액이 아님. (예) 1만 3천원짜리 냉동 닭다리살을 구매했더라도 요리에 실재로사용된 닭다리의 양이 3천원치라면 이곳에 3천원이라고 적었음.
           </div>
-          <!-- Add Arrows -->
-          <div class="swiper-button-next text-white"></div>
-          <div class="swiper-button-prev text-white"></div>
+        </div>
+        <span class="mx-2">|</span>
+        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">schedule</span> 40분
+        </div>
+      </div>
+      <!-- 하단 정보 -->
+      <div class="text-center text-base text-gray-500">
+        레시피 참고: <a href="https://www.youtube.com/watch?v=6JMzS_dzT5Q" target="_blank"
+          rel="noopener noreferrer" class="font-roboto text-blue-600 hover:underline">@요리왕비룡</a>
+      </div>
+      <!-- 구글 아이콘 폰트 -->
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    </div>
+  </div>
+  <!-- 재료 꺼내기 섹션 -->
+  <section class="w-full bg-[#F5F5F7]">
+    <div class="w-full flex flex-col items-center justify-center py-24">
+      <h1 class="text-4xl font-bold tracking-wide mb-4">재료 꺼내기</h1>
+      <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
+        <span class="font-medium">✅ 재료 꺼내기 <span class="opacity-50">→ 양념 만들기 → 재료 손질 → 조리</span></span>
+      </div>
+    </div>
+    <!-- 재료 세트들 -->
+    <div class="w-full px-5 flex flex-col md:flex-row flex-wrap gap-4 justify-center pb-24">
+      <!-- 세트 1: 윗쪽 수납장 -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장01.png" alt="주방과 냉장고" class="w-full mx-auto" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">① 윗쪽 선반</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>자동 채칼 (없으면 수동 채칼)</li>
+            <li>비닐장갑 2개</li>
+            <li>숟가락 1개</li>
+            <li>반찬통 (나중에 무생채 담을만큼 큰 것)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 세트 2: 아랫쪽 수납장 -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장02.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">② 아랫쪽 선반</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>채칼 (무 껍질 벗길 용도)</li>
+            <li>저울</li>
+            <li>소금, 설탕</li>
+            <li>식초 (또는 매실액)</li>
+            <li>미원 (없으면 패스)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 세트 3: 아랫쪽 수납장 -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장03.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">③ 아랫쪽 선반</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>큰 보울</li>
+            <li>넓은 쟁반</li>
+            <li>도마, 칼</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 세트 4: 냉장실 -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장04.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">④ 냉장실</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>무 1/2개</li>
+            <li>고춧가루 (김치용 굵은 고춧가루. 고운 고춧가루 괜찮음)</li>
+            <li>까나리 액젓 (멸치 액젓도 괜찮음)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 세트 5: 냉동실 -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장05.png" alt="주방과 냉장고" class="w-full mx-auto" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">⑤ 냉동실</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>쪽파 (대파도 괜찮음)</li>
+            <li>다진마늘 2T</li>
+            <li>다진생강 1/2T</li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Swiper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    let swiper;
-    const modal = document.getElementById('gallery-modal');
-    const closeBtn = document.getElementById('close-modal');
-    const images = document.querySelectorAll('main img[data-idx]');
-    // 이미지 클릭 시 모달 오픈 + 해당 인덱스로 이동
-    images.forEach((img, idx) => {
-      img.addEventListener('click', () => {
-        modal.classList.remove('hidden');
-        if (!swiper) {
-          swiper = new Swiper('.swiper', {
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-            loop: false,
-            initialSlide: idx,
-          });
-        } else {
-          swiper.slideTo(idx, 0);
-        }
-      });
-    });
-    // 닫기 버튼
-    closeBtn.addEventListener('click', () => {
-      modal.classList.add('hidden');
-    });
-    // 바깥 클릭 시 닫기
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.add('hidden');
-      }
-    });
-    // 상단바 뒤로가기(홈 이동) 버튼 클릭 시 스크롤 위치 저장 및 직접 이동
-    const backBtn = document.querySelector('header a[href="index.html"]');
-    if (backBtn) {
-      backBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        sessionStorage.setItem('scrollY', window.scrollY);
-        window.location.href = this.getAttribute('href');
-      });
-    }
-  </script>
+  </section>
+
+  <!-- 재료 손질 섹션 -->
+  <section class="w-full">
+    <div class="w-full flex flex-col items-center justify-center py-24">
+      <h1 class="text-4xl font-bold tracking-wide mb-4">재료 손질</h1>
+      <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
+        <span class="font-medium opacity-50">재료 꺼내기 <span class="opacity-50">→</span></span>
+        <span class="font-medium">✅ 재료 손질 <span class="opacity-50">→ 양념 만들기 → 조리</span></span>
+      </div>
+    </div>
+    <!-- 재료 손질 프로세스 -->
+    <div class="w-full mx-auto">
+      <div class="border border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">자동 채칼 콘센트에 꽂고 쟁반 그 앞쪽에 두기</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">💧 무 씻기</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">칼로 윗부분 잘라내고, 수동 채칼로 껍질 벗겨내기</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">무게 재기 (이 레시피는 800~850g기준임. 이보다 작거나 클 경우 나머지 양념 재료는 알아서 적당히 가감하기)</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">자동 채칼로 채 썰기</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">큰 보울에 담기</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">보울에 소금 1T 넣기</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">보울에 설탕 2T 넣기</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">비닐장갑 양손에 끼고 버무리기</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">15분 알람 맞추기</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 양념 만들기 섹션 -->
+  <section class="w-full bg-[#F5F5F7]">
+    <div class="w-full flex flex-col items-center justify-center py-24">
+      <h1 class="text-4xl font-bold tracking-wide mb-4">양념 만들기</h1>
+      <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
+        <span class="font-medium opacity-50">재료 꺼내기 → 재료 손질 <span class="opacity-50">→</span></span>
+        <span class="font-medium">✅ 양념 만들기 <span class="opacity-50">→ 조리</span></span>
+      </div>
+    </div>
+    <!-- 양념 프로세스 -->
+    <div class="w-full mx-auto">
+      <div class="border border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">★ 아래 재료들 종이컵에 넣고 숟가락으로 잘 섞어주기 ★</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">설탕 1T</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">양조간장 8T</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">식초 2T</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 조리 섹션 -->
+  <section class="w-full">
+    <div class="w-full flex flex-col items-center justify-center py-24">
+      <h1 class="text-4xl font-bold tracking-wide mb-4">조리</h1>
+      <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
+        <span class="font-medium opacity-50">재료 꺼내기 → 재료 손질 → 양념 만들기 <span class="opacity-50">→</span></span>
+        <span class="font-medium">✅ 조리</span>
+      </div>
+    </div>
+    <!-- 조리 프로세스 -->
+    <div class="w-full mx-auto">
+      <div class="border border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">실리콘 주걱으로 팬에 담겨있는 재료 볶기</div>
+        <div class="text-center text-[#37332F] font-normal mt-4 px-4">🔥🔥 중불</div>
+        <div class="text-center text-[#37332F] font-normal mt-4 px-4">양파, 애호박 반 이상이 익어서 투명해질까지 볶기</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">양파, 애호박이 어느정도 익으면 양념 넣고 좀 더 볶아주기</div>
+        <div class="text-center text-[#37332F] font-normal mt-4 px-4">🔥🔥 중불</div>
+        <div class="text-center text-[#37332F] font-normal mt-4 px-4">다 익었으면 불 끄고 완성!</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">★ 끝! ★</div>
+      </div>
+    </div>
+  </section>
 </body>
+
 </html>

@@ -1,0 +1,18 @@
+/* 공통 스타일 */
+body {
+  font-family: 'Pretendard', 'Roboto', sans-serif;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+.step-content {
+  @apply text-center text-3xl text-[#37332F] font-normal;
+}
+
+/* 모든 과정 텍스트에 적용될 공통 패딩 */
+.process-text {
+  padding-left: 1rem;  /* 16px */
+  padding-right: 1rem; /* 16px */
+} 

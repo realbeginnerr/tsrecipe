@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZC9D06H6D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-RZC9D06H6D');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Hotjar Tracking Code for tsrecipe -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 3805153, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+  <!-- Pretendard (Korean) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+  <!-- Roboto (English, Numbers) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    body {
+      font-family: 'Pretendard', 'Roboto', sans-serif;
+    }
+
+    .font-roboto {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .step-item {
+      @apply border-b border-[#e0ded9] py-24;
+    }
+    .step-content {
+      @apply text-center text-3xl text-[#37332F] font-normal;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col items-center">
+  <!-- 상단 바 -->
+  <header class="h-12 w-full flex items-center justify-between px-4 sticky top-0 bg-white z-20 border-b">
+    <a href="index.html" class="flex items-center justify-center w-8 h-8" aria-label="홈으로 이동">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-gray-700">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M4.5 10.5V19a2 2 0 002 2h2.5a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1H17.5a2 2 0 002-2v-8.5" />
+      </svg>
+    </a>
+    <h1 class="text-base font-medium">★필독★</h1>
+    <div class="w-8"></div>
+  </header>
+  <!-- 상단 이미지 -->
+  <img src="https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg" alt="공지사항 이미지"
+    class="w-full h-80 object-cover shadow" />
+  <!-- 메인 컨텐츠 섹션 -->
+  <div class="w-full max-w-[700px] pt-14 mb-32 px-6 mx-auto">
+    <!-- intro 간략 소개 -->
+    <div class="flex flex-col items-center">
+      <!-- 제목 -->
+      <h1 class="text-4xl font-bold text-gray-800 pb-8 tracking-wide">★필독★</h1>
+      <!-- 설명 -->
+      <div class="text-center text-lg text-gray-700 mb-12">
+        <span class="text-red-600 font-semibold">레시피 따라해보다가 방금 어디까지 봤는지 헷갈렸던 사람 손 <span
+            class='inline-block'>🖐</span></span><br />
+        내가 요리할 때 보려고 큰 글씨로, 프로세스를 잘게 쪼개어 적어둔 레시피
+      </div>
+    </div>
+    <!-- 두 번째 섹션: 주방/냉장고 순서 안내 -->
+    <div class="w-full flex flex-col items-center">
+      <!-- 주방/냉장고 이미지 (예시 이미지 사용) -->
+      <div class="w-full">
+        <img src="img/kitchen 부엌수납장00.png" alt="주방과 냉장고" class="w-full rounded-lg shadow" />
+      </div>
+      <!-- 주방/냉장고 관련 안내 텍스트 -->
+      <div class="w-full text-gray-800 text-lg pt-14">
+        <div class="mb-2">
+          <span class="inline-block align-middle text-lg mr-1">1️⃣</span>
+          <span class="font-bold">재료 꺼내는 순서</span> <span class="text-gray-500">(요리하면서 왔다갔다 하지 않으려면)</span>
+        </div>
+        <div class="mb-4 text-gray-700">
+          ① 왼쪽 수납장 → ②③ 아래쪽 수납장 → ④ 냉장실 → ⑤ 냉동실
+        </div>
+        <div class="mb-4">
+          <span class="inline-block align-middle text-lg mr-1">1️⃣</span>
+          <span class="font-bold">양념 배합 순서</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>양념 배합할 때는 여기에 적힌 순서로 배합하기</li>
+            <li>스푼에 묻지 않는 소금, 설탕 부터 시작해서 스푼에 묻는 물엿, 굴소스 등의 순서로 적어뒀음</li>
+          </ul>
+        </div>
+        <div class="mb-4">
+          <span class="inline-block align-middle text-lg mr-1">⚖️</span>
+          <span class="font-bold">계량 표기</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>1T: 밥숟가락으로 1스푼</li>
+            <li>한줌: 손으로 한 줌</li>
+          </ul>
+        </div>
+        <div class="mb-4">
+          <span class="inline-block align-middle text-lg mr-1">✅</span>
+          <span class="font-bold">미리 준비해둘 것</span> <span class="text-gray-500">(선택사항)</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>키친타올 또는 휴지 - 요리하면서 참기릅병 입구, 간장통 입구 등 뭔가 닦을일 많음</li>
+            <li>재료 얼려두기 - 1~2인 가구이거나 또는 귀차니즘이 심한 경우 자주 쓰는 재료들 미리 씻고 잘라서 얼려두면 편하고 오래 두고 먹을 수 있음</li>
+            <li>(예) 마늘 다진 후 얼음통에 소분해서, 양파 채썰어서, 파 채썰어서, 청양고추 다져서, 밥 1인분씩 소분해서, 버터 100g씩 소분해서</li>
+            <li>디지털 저울, 종이컵, 500ml 빈 플라스틱 물병, 2L짜리 빈 플라스팅 물병 있으면 좋음</li>
+          </ul>
+        </div>
+        <div class="mb-4"><span class="font-bold">💧 (물방울 표시) : 손에 물, 양념 등이 묻는 작업</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>되도록 한번에 몰아서 할 수 있도록 순서 조절했음.</li>
+            <li>물론 어쩔 수 없이 여러번 손에 물 묻혀야 하는 경우도 있음</li>
+          </ul>
+        </div>
+        <div><span class="font-bold">🛒 (쇼핑카트 표시) : 마트에서 장봐야 하는 재료</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 메뉴 설문 버튼 -->
+  <a href="https://forms.gle/siKczBVLdsFdWyRG9" target="_blank" rel="noopener noreferrer" class="fixed bottom-7 left-1/2 -translate-x-1/2 w-[340px] max-w-[90vw] h-12 bg-gray-700 hover:bg-gray-800 rounded-lg text-gray-100 font-medium transition-colors duration-200 flex items-center justify-center z-10">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mr-2">
+      <path d="M2.695 14.763l-1.262 3.154a.5.5 0 00.65.65l3.155-1.262a4 4 0 001.343-.885L17.5 5.5a2.121 2.121 0 00-3-3L3.58 13.42a4 4 0 00-.885 1.343z" />
+    </svg>
+    메뉴 요청
+  </a>
+</body>
+
+</html>
