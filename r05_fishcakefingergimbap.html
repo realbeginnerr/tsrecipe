@@ -65,7 +65,14 @@
       </svg>
     </a>
     <h1 class="text-base font-medium">어묵 손가락 김밥</h1>
-    <div class="w-8"></div>
+    <div class="flex gap-[8px] ml-2">
+      <a href="r05_fishcakefingergimbap.html" class="text-sm font-bold text-blue-600">
+        <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/kor.png" alt="한국어" style="height: 20px;" />
+      </a>
+      <a href="r05_fishcakefingergimbap_eng.html" class="text-sm font-medium text-gray-600 hover:text-gray-900">
+        <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/eng.png" alt="English" style="height: 20px;" />
+      </a>
+    </div>
   </header>
   <!-- 상단 이미지 -->
   <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap/00.jpg" alt="어묵 손가락 김밥"
@@ -100,9 +107,10 @@
       </div>
       <!-- 하단 정보 -->
       <div class="text-center text-base text-gray-500">
-        레시피 참고: <a href="https://www.youtube.com/watch?v=BoQ_m1FnIyI" target="_blank"
+        레시피 참고: <a href="https://www.youtube.com/watch?v=6JMzS_dzT5Q" target="_blank"
           rel="noopener noreferrer" class="font-roboto text-blue-600 hover:underline">@이남자의cook</a>
       </div>
+      <a href="mustread.html" target="_blank" rel="noopener noreferrer" class="mt-4 px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors inline-block">★필독★</a>
       <!-- 구글 아이콘 폰트 -->
       <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     </div>
@@ -414,6 +422,14 @@
           tooltip.classList.add('hidden');
         }
       });
+    });
+
+    // Set opacity of English image to 50% when on Korean page
+    document.addEventListener('DOMContentLoaded', function() {
+      const engImage = document.querySelector('a[href="r05_fishcakefingergimbap_eng.html"] img');
+      if (engImage) {
+        engImage.style.opacity = '0.5';
+      }
     });
   </script>
 </body>

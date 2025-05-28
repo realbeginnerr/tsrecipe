@@ -13,7 +13,7 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>무생채</title>
+  <title>만능 양념장</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- 공통 스타일 -->
@@ -59,23 +59,30 @@
 <body class="min-h-screen flex flex-col items-center">
   <!-- 상단 바 -->
   <header class="h-12 w-full flex items-center justify-between px-4 sticky top-0 bg-white z-20 border-b">
-    <a href="index.html" class="flex items-center justify-center w-8 h-8" aria-label="홈으로 이동">
+    <a href="index.html" class="flex items-center justify-center w-8 h-8" aria-label="Go to home">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-gray-700">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M4.5 10.5V19a2 2 0 002 2h2.5a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1H17.5a2 2 0 002-2v-8.5" />
       </svg>
     </a>
-    <h1 class="text-base font-medium">무생채</h1>
-    <div class="w-8"></div>
+    <h1 class="text-base font-medium">양념간장</h1>
+    <div class="flex gap-[8px] ml-2">
+      <a href="r03_seasonedsoysauce.html" class="text-sm font-bold text-blue-600">
+        <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/kor.png" alt="한국어" style="height: 20px;" />
+      </a>
+      <a href="r03_seasonedsoysauce_eng.html" class="text-sm font-medium text-gray-600 hover:text-gray-900">
+        <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/eng.png" alt="English" style="height: 20px;" />
+      </a>
+    </div>
   </header>
   <!-- 상단 이미지 -->
-  <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/00.jpg" alt="무생채"
+  <img src="img/r03_seasonedsoysauce/00.jpg" alt="만능 양념장"
     class="w-full h-80 object-cover shadow" />
   <!-- 메인 컨텐츠 섹션 -->
   <div class="w-full max-w-[700px] py-24 mx-auto">
     <!-- intro 간략 소개 -->
     <div class="flex flex-col items-center">
       <!-- 제목 -->
-      <h1 class="text-4xl font-bold text-gray-800 mb-5 tracking-wide">무생채</h1>
+      <h1 class="text-4xl font-bold text-gray-800 mb-5 tracking-wide">만능 양념장</h1>
       <!-- 정보 바 -->
       <div class="flex flex-wrap justify-center items-center gap-4 text-lg text-gray-700 mb-5">
         <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">person</span> 8인분 이상
@@ -83,7 +90,7 @@
         <span class="mx-2">|</span>
         <div class="flex items-center gap-1 relative group">
           <span class="material-symbols-outlined align-middle cursor-pointer" onclick="toggleTooltip(this)">payments</span>
-          <span class="cursor-pointer" onclick="toggleTooltip(this)">₩2,000</span>
+          <span class="cursor-pointer" onclick="toggleTooltip(this)">?</span>
           <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-black/80 text-white text-sm rounded hidden w-[300px] break-words">
             • 양파, 대파, 청양고추, 다진마늘, 깨, 간장 등 기본적인 재료들이 집에 이미 있다고 가정하고 계산한 가격임.<br>
             • 요리에 실재로 사용된 양만큼을 계산한 가격임. 마트에서 장볼 때 지불한 금액이 아님.<br>
@@ -91,14 +98,15 @@
           </div>
         </div>
         <span class="mx-2">|</span>
-        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">schedule</span> 40분
+        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">schedule</span> 5분
         </div>
       </div>
       <!-- 하단 정보 -->
       <div class="text-center text-base text-gray-500">
-        레시피 참고: <a href="https://www.youtube.com/watch?v=6JMzS_dzT5Q" target="_blank"
-          rel="noopener noreferrer" class="font-roboto text-blue-600 hover:underline">@요리왕비룡</a>
+        레시피 참고: <a href="https://www.youtube.com/shorts/vIgGG5nLW-Q" target="_blank"
+          rel="noopener noreferrer" class="font-roboto text-blue-600 hover:underline">@만원요리최씨남매</a>
       </div>
+      <a href="mustread.html" target="_blank" rel="noopener noreferrer" class="mt-4 px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors inline-block">★필독★</a>
       <!-- 구글 아이콘 폰트 -->
       <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     </div>
@@ -108,7 +116,7 @@
     <div class="w-full flex flex-col items-center justify-center py-24">
       <h1 class="text-4xl font-bold tracking-wide mb-4">재료 꺼내기</h1>
       <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
-        <span class="font-medium">✅ 재료 꺼내기 <span class="opacity-50">→ 양념 만들기 → 재료 손질 → 버무리기</span></span>
+        <span class="font-medium">✅ 재료 꺼내기 <span class="opacity-50">→ 재료 손질 → 양념 만들기 → 섞기</span></span>
       </div>
     </div>
     <!-- 재료 세트들 -->
@@ -119,38 +127,33 @@
         <div class="w-full mx-auto p-6">
           <span class="font-bold">① 윗쪽 선반</span>
           <ul class="list-disc pl-6 mt-2">
-            <li>자동 채칼 (없으면 수동 채칼)</li>
-            <li>비닐장갑 2개</li>
+            <li>유리 반찬통</li>
             <li>숟가락 1개</li>
-            <li>반찬통 (나중에 무생채 담을만큼 큰 것)</li>
+            <li>깨절구, 방아</li>
           </ul>
         </div>
       </div>
 
-      <!-- 세트 2: 아랫쪽 수납장 -->
+      <!-- 세트 2: 아랫쪽 선반 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
         <img src="img/kitchen 부엌수납장02.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">② 아랫쪽 선반</span>
           <ul class="list-disc pl-6 mt-2">
-            <li>채칼 (무 껍질 벗길 용도)</li>
-            <li>저울</li>
-            <li>소금, 설탕</li>
-            <li>식초 (또는 매실액)</li>
-            <li>미원 (없으면 패스)</li>
           </ul>
         </div>
       </div>
 
-      <!-- 세트 3: 아랫쪽 수납장 -->
+      <!-- 세트 3: 아랫쪽 선반 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
         <img src="img/kitchen 부엌수납장03.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">③ 아랫쪽 선반</span>
           <ul class="list-disc pl-6 mt-2">
-            <li>큰 보울</li>
-            <li>넓은 쟁반</li>
-            <li>도마, 칼</li>
+            <li>양조간장</li>
+            <li>물엿</li>
+            <li>식초</li>
+            <li>통깨</li>
           </ul>
         </div>
       </div>
@@ -161,9 +164,11 @@
         <div class="w-full mx-auto p-6">
           <span class="font-bold">④ 냉장실</span>
           <ul class="list-disc pl-6 mt-2">
-            <li>무 1/2개</li>
-            <li>고춧가루 (김치용 굵은 고춧가루. 고운 고춧가루 괜찮음)</li>
-            <li>까나리 액젓 (멸치 액젓도 괜찮음)</li>
+            <li>고춧가루</li>
+            <li>참치액</li>
+            <li>참기름</li>
+            <li>청양고추 1개</li>
+            <li>대파 (또는 쪽파/양파/부추 등 채소 아무거나)</li>
           </ul>
         </div>
       </div>
@@ -174,9 +179,7 @@
         <div class="w-full mx-auto p-6">
           <span class="font-bold">⑤ 냉동실</span>
           <ul class="list-disc pl-6 mt-2">
-            <li>쪽파 (대파도 괜찮음)</li>
             <li>다진마늘 2T</li>
-            <li>다진생강 1/2T</li>
           </ul>
         </div>
       </div>
@@ -189,49 +192,17 @@
       <h1 class="text-4xl font-bold tracking-wide mb-4">재료 손질</h1>
       <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
         <span class="font-medium opacity-50">재료 꺼내기 <span class="opacity-50">→</span></span>
-        <span class="font-medium">✅ 재료 손질 <span class="opacity-50">→ 양념 만들기 → 버무리기</span></span>
+        <span class="font-medium">✅ 재료 손질 <span class="opacity-50">→ 양념 만들기 → 섞기</span></span>
       </div>
     </div>
     <!-- 재료 손질 프로세스 -->
     <div class="w-full mx-auto">
       <div class="border border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">자동 채칼 콘센트에 꽂고 쟁반 그 앞쪽에 두기</div>
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">채소류 씻기</div>
       </div>
       <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">💧쪽파 씻기</div>
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">채소류 잘게 다진 후 반창통에 담기</div>
       </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">💧무에 뭍은 흙 씻어내기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">칼로 윗부분 잘라내고, 수동 채칼로 껍질 벗겨내기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">💧무에 붙어있는 자잘한 껍질 깨끗히 씻어내기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">무게 재기</div>
-        <div class="text-center text-[#37332F] font-normal mt-4 px-4">(이 레시피는 800~850g기준임. 이보다 작거나 클 경우 나머지 양념 재료는 알아서 적당히 가감하기)</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">자동 채칼로 채 썰기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">큰 보울에 담기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">보울에 소금 1T, 설탕 2T 넣기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">비닐장갑 양손에 끼고 버무리기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">15분 알람 맞추기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">쪽파 3대를 5cm 길이 정도로 길쭉하게 썰어주기</div>
-      </div>
-
     </div>
   </section>
 
@@ -241,56 +212,34 @@
       <h1 class="text-4xl font-bold tracking-wide mb-4">양념 만들기</h1>
       <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
         <span class="font-medium opacity-50">재료 꺼내기 → 재료 손질 <span class="opacity-50">→</span></span>
-        <span class="font-medium">✅ 양념 만들기 <span class="opacity-50">→ 버무리기</span></span>
+        <span class="font-medium">✅ 양념 만들기 <span class="opacity-50">→ 섞기</span></span>
       </div>
     </div>
     <!-- 양념 프로세스 -->
     <div class="w-full mx-auto">
       <div class="border border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">★ 아래 재료들 반찬통에 넣고 숟가락으로 잘 섞어주기 ★</div>
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">★아래 재료 반찬통에 담기★</div>
       </div>
       <div class="border-b border-[#e0ded9] py-24">
         <div class="text-center text-3xl text-[#37332F] font-normal px-4">고춧가루 2T</div>
       </div>
       <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">다진마늘 2T</div>
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">통깨 1T → 절구로 으깬 후 반찬통에 넣기</div>
       </div>
       <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">설탕 1/2T</div>
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">양조간장 10T</div>
       </div>
       <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">식초 1T</div>
-        <div class="text-center text-[#37332F] font-normal mt-4 px-4">(또는 매실액)</div>
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">참치액 2T</div>
       </div>
       <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">까나리 액젓 2T</div>
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">식초 2T</div>
       </div>
       <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">다진 생강 1/2T</div>
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">참기름 1T</div>
       </div>
       <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">미원 1/4T</div>
-        <div class="text-center text-[#37332F] font-normal mt-4 px-4">(없으면 생략)</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">쪽파 썰어둔 것</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">숟가락으로 잘 섞어주기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">15분 알람 울리면 비닐장갑 끼고 몇 번 뒤섞어주기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">다시 15분 알람 맞추기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">15분 알람 울리면 비닐장갑 끼고 물기 꽉 짜주기
-        </div>
-        <div class="text-center text-[#37332F] font-normal mt-4 px-4">물기 짠 후 반찬통에 두고 잠시 대기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">무 절였던 보울은 물에 헹궈주기</div>
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">물엿 2T</div>
       </div>
     </div>
   </section>
@@ -298,44 +247,50 @@
   <!-- 조리 섹션 -->
   <section class="w-full">
     <div class="w-full flex flex-col items-center justify-center py-24">
-      <h1 class="text-4xl font-bold tracking-wide mb-4">버무리기</h1>
+      <h1 class="text-4xl font-bold tracking-wide mb-4">섞기</h1>
       <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
         <span class="font-medium opacity-50">재료 꺼내기 → 재료 손질 → 양념 만들기 <span class="opacity-50">→</span></span>
-        <span class="font-medium">✅ 버무리기</span>
+        <span class="font-medium">✅ 섞기</span>
       </div>
     </div>
     <!-- 조리 프로세스 -->
     <div class="w-full mx-auto">
       <div class="border border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">절인 무, 양념 → 보울에 담기</div>
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">숟가락으로 재료 모두 섞어주기</div>
       </div>
       <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">비닐장갑 낀채로 잘 섞어주기</div>
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">맛보고 싱거우면 국간장 조금 추가하기</div>
       </div>
       <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">반찬통에 담고 실온에서 하루 익힌 후 먹기</div>
-        <div class="text-center text-[#37332F] font-normal mt-4 px-4">(바로 냉장고에 넣어도 되긴 함)</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">★ 끝! ★</div>
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">★끝!★</div>
       </div>
     </div>
   </section>
 
   <script>
     function toggleTooltip(element) {
-      const tooltip = element.parentElement.querySelector('div');
+      const tooltip = element.nextElementSibling;
       tooltip.classList.toggle('hidden');
     }
 
-    // Close tooltip when clicking outside
     document.addEventListener('click', function(event) {
-      const tooltips = document.querySelectorAll('.group > div');
+      const tooltips = document.querySelectorAll('[class*="tooltip"]');
       tooltips.forEach(tooltip => {
-        if (!tooltip.parentElement.contains(event.target)) {
+        if (!tooltip.contains(event.target) && !event.target.matches('.cursor-pointer')) {
           tooltip.classList.add('hidden');
         }
       });
+    });
+
+    // 현재 페이지에 따라 이미지 투명도 설정
+    document.addEventListener('DOMContentLoaded', function() {
+      const currentPage = window.location.pathname;
+      const engImage = document.querySelector('a[href="r03_seasonedsoysauce_eng.html"] img[alt="English"]');
+      
+      // r03_seasonedsoysauce.html 페이지에서는 eng 이미지만 50% 투명하게
+      if (engImage) {
+        engImage.style.opacity = '0.5';
+      }
     });
   </script>
 </body>

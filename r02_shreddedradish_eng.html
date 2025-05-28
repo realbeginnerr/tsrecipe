@@ -13,7 +13,7 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shredded Radish Salad</title>
+  <title>Radish Kimchi</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Common styles -->
@@ -59,46 +59,58 @@
 <body class="min-h-screen flex flex-col items-center">
   <!-- Top bar -->
   <header class="h-12 w-full flex items-center justify-between px-4 sticky top-0 bg-white z-20 border-b">
-    <a href="index.html" class="flex items-center justify-center w-8 h-8" aria-label="Go to home">
+    <a href="index_eng.html" class="flex items-center justify-center w-8 h-8" aria-label="Go to home">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-gray-700">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M4.5 10.5V19a2 2 0 002 2h2.5a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1H17.5a2 2 0 002-2v-8.5" />
       </svg>
     </a>
-    <h1 class="text-base font-medium">Shredded Radish Salad</h1>
-    <div class="w-8"></div>
+    <h1 class="text-base font-medium">Radish Kimchi</h1>
+    <div class="flex gap-[8px] ml-2">
+      <a href="r02_shreddedradish.html" class="text-sm font-medium text-gray-600 hover:text-gray-900">
+        <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/kor.png" alt="한국어" style="height: 20px;" />
+      </a>
+      <a href="r02_shreddedradish_eng.html" class="text-sm font-bold text-blue-600">
+        <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/eng.png" alt="English" style="height: 20px;" />
+      </a>
+    </div>
   </header>
   <!-- Top image -->
-  <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/00.jpg" alt="Shredded Radish Salad"
+  <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r02_shreddedradish/00.jpg" alt="Radish Kimchi"
     class="w-full h-80 object-cover shadow" />
   <!-- Main content section -->
   <div class="w-full max-w-[700px] py-24 mx-auto">
     <!-- intro brief introduction -->
     <div class="flex flex-col items-center">
       <!-- Title -->
-      <h1 class="text-4xl font-bold text-gray-800 mb-5 tracking-wide">Shredded Radish Salad</h1>
+      <h1 class="text-4xl font-bold text-gray-800 mb-5 tracking-wide">Radish Kimchi</h1>
       <!-- Info bar -->
       <div class="flex flex-wrap justify-center items-center gap-4 text-lg text-gray-700 mb-5">
-        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">person</span> Servings: 8+
+        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">person</span>Servings: 8+
         </div>
         <span class="mx-2">|</span>
-        <div class="flex items-center gap-1 relative group">
-          <span class="material-symbols-outlined align-middle cursor-pointer" onclick="toggleTooltip(this)">payments</span>
-          <span class="cursor-pointer" onclick="toggleTooltip(this)">$2</span>
+        <div class="group relative">
+          <div class="flex items-center gap-2 cursor-pointer" onclick="toggleTooltip(this)">
+            <svg class="w-5 h-5 text-[#37332F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-[#37332F] cursor-pointer">$3</span>
+          </div>
           <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-black/80 text-white text-sm rounded hidden w-[300px] break-words">
-            • Price calculated assuming basic ingredients like onions, green onions, red chili peppers, minced garlic, sesame seeds, soy sauce are already at home.<br>
-            • Price calculated based on the actual amount used in the recipe, not the purchase price.<br>
-            • (Example) Even if you bought frozen chicken thigh for $10, if you only used $1 worth in the recipe, it's listed as $1 here.
+            • The price is calculated assuming basic ingredients like onions, green onions, chili peppers, minced garlic, sesame seeds, and soy sauce are already available at home.<br>
+            • The price reflects the actual amount used in the recipe, not the amount paid at the store.<br>
+            • (Example) Even if you bought a $10 pack of frozen chicken thighs, if you only used $1 worth in the recipe, it would be listed as $1 here.
           </div>
         </div>
         <span class="mx-2">|</span>
-        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">schedule</span> 40 mins
+        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">schedule</span> 40 min
         </div>
       </div>
       <!-- Bottom info -->
       <div class="text-center text-base text-gray-500">
-        Recipe reference: <a href="https://www.youtube.com/watch?v=6JMzS_dzT5Q" target="_blank"
+        Recipe reference: <a href="https://www.youtube.com/watch?v=OA-X27O7s5w&t=218s" target="_blank"
           rel="noopener noreferrer" class="font-roboto text-blue-600 hover:underline">@요리왕비룡</a>
       </div>
+      <a href="mustread.html" target="_blank" rel="noopener noreferrer" class="mt-4 px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors inline-block">★Must read★</a>
       <!-- Google icon font -->
       <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     </div>
@@ -323,18 +335,28 @@
 
   <script>
     function toggleTooltip(element) {
-      const tooltip = element.parentElement.querySelector('div');
+      const tooltip = element.nextElementSibling;
       tooltip.classList.toggle('hidden');
     }
 
-    // Close tooltip when clicking outside
     document.addEventListener('click', function(event) {
-      const tooltips = document.querySelectorAll('.group > div');
+      const tooltips = document.querySelectorAll('[class*="tooltip"]');
       tooltips.forEach(tooltip => {
-        if (!tooltip.parentElement.contains(event.target)) {
+        if (!tooltip.contains(event.target) && !event.target.matches('.cursor-pointer')) {
           tooltip.classList.add('hidden');
         }
       });
+    });
+
+    // 현재 페이지에 따라 이미지 투명도 설정
+    document.addEventListener('DOMContentLoaded', function() {
+      const currentPage = window.location.pathname;
+      const korImage = document.querySelector('a[href="r02_shreddedradish.html"] img[alt="한국어"]');
+      
+      // r02_shreddedradish_eng.html 페이지에서는 kor 이미지만 50% 투명하게
+      if (korImage) {
+        korImage.style.opacity = '0.5';
+      }
     });
   </script>
 </body>

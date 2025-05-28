@@ -65,7 +65,14 @@
       </svg>
     </a>
     <h1 class="text-base font-medium">닭다리살 데리야끼</h1>
-    <div class="w-8"></div>
+    <div class="flex gap-[8px] ml-2">
+      <a href="r06_chickenteriyaki.html" class="text-sm font-bold text-blue-600">
+        <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/kor.png" alt="한국어" style="height: 20px;" />
+      </a>
+      <a href="r06_chickenteriyaki_eng.html" class="text-sm font-medium text-gray-600 hover:text-gray-900">
+        <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/eng.png" alt="English" style="height: 20px;" />
+      </a>
+    </div>
   </header>
   <!-- 상단 이미지 -->
   <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r06_chickenteriyaki/00.jpg" alt="닭다리살 데리야끼"
@@ -103,6 +110,7 @@
         레시피 참고: <a href="https://www.youtube.com/watch?v=rdoc9zmVtoc&t=1s" target="_blank"
           rel="noopener noreferrer" class="font-roboto text-blue-600 hover:underline">@정호영의 오늘도 요리</a>
       </div>
+      <a href="mustread.html" target="_blank" rel="noopener noreferrer" class="mt-4 px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors inline-block">★필독★</a>
       <!-- 구글 아이콘 폰트 -->
       <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     </div>
@@ -322,18 +330,29 @@
   </section>
 
   <script>
-    function toggleTooltip(element) {
-      const tooltip = element.nextElementSibling;
-      tooltip.classList.toggle('hidden');
+    // 툴팁 토글 함수
+    function toggleTooltip(button) {
+      const tooltip = button.nextElementSibling;
+      if (tooltip.style.display === 'block') {
+        tooltip.style.display = 'none';
+      } else {
+        tooltip.style.display = 'block';
+      }
     }
 
-    document.addEventListener('click', function(event) {
-      const tooltips = document.querySelectorAll('[class*="tooltip"]');
-      tooltips.forEach(tooltip => {
-        if (!tooltip.contains(event.target) && !event.target.matches('.cursor-pointer')) {
-          tooltip.classList.add('hidden');
-        }
-      });
+    // 현재 페이지의 언어 이미지 투명도 조정
+    document.addEventListener('DOMContentLoaded', function() {
+      const currentPath = window.location.pathname;
+      const isEnglishPage = currentPath.includes('_eng.html');
+      
+      const koreanImage = document.querySelector('a[href="r06_chickenteriyaki.html"] img');
+      const englishImage = document.querySelector('a[href="r06_chickenteriyaki_eng.html"] img');
+      
+      if (isEnglishPage) {
+        if (koreanImage) koreanImage.style.opacity = '0.5';
+      } else {
+        if (englishImage) englishImage.style.opacity = '0.5';
+      }
     });
   </script>
 </body>

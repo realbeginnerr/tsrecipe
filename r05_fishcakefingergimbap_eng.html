@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZC9D06H6D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RZC9D06H6D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RZC9D06H6D');
-</script>
-
+    gtag('config', 'G-RZC9D06H6D');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fishcake Fingers Gimbap</title>
+  <title>Eomuk Finger Gimbap</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- 공통 스타일 -->
   <link rel="stylesheet" href="style.css">
+  <!-- Hotjar Tracking Code for tsrecipe -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 3805153, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
   <!-- Pretendard (Korean) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
   <!-- Roboto (English, Numbers) -->
@@ -26,142 +36,299 @@
   <!-- Swiper.js CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
-    body { font-family: 'Pretendard', 'Roboto', sans-serif; }
-    .font-roboto { font-family: 'Roboto', sans-serif; }
+    body {
+      font-family: 'Pretendard', 'Roboto', sans-serif;
+    }
+
+    .font-roboto {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .step-item {
+      @apply border-b border-[#e0ded9] py-24;
+    }
+    .step-content {
+      @apply text-center text-3xl text-[#37332F] font-normal;
+    }
+    .step-padding {
+      @apply px-4;
+    }
   </style>
 </head>
-<body class="bg-[#FAF9F6] min-h-screen flex flex-col items-center">
+
+<body class="min-h-screen flex flex-col items-center">
   <!-- 상단 바 -->
   <header class="h-12 w-full flex items-center justify-between px-4 sticky top-0 bg-white z-20 border-b">
-    <a href="index.html" class="flex items-center justify-center w-8 h-8" aria-label="홈으로 이동">
+    <a href="index_eng.html" class="flex items-center justify-center w-8 h-8" aria-label="Go to home">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-gray-700">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M4.5 10.5V19a2 2 0 002 2h2.5a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1H17.5a2 2 0 002-2v-8.5" />
       </svg>
     </a>
-    <h1 class="text-base font-medium">Fishcake Fingers Gimbap</h1>
-    <div class="w-8"></div>
+    <h1 class="text-base font-medium">Eomuk Finger Gimbap</h1>
+    <div class="flex gap-[8px] ml-2">
+      <a href="r05_fishcakefingergimbap.html" class="text-sm font-medium text-gray-600 hover:text-gray-900">
+        <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/kor.png" alt="한국어" style="height: 20px;" />
+      </a>
+      <a href="r05_fishcakefingergimbap_eng.html" class="text-sm font-bold text-blue-600">
+        <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/eng.png" alt="English" style="height: 20px;" />
+      </a>
+    </div>
   </header>
-  <!-- 이미지 리스트 -->
-  <main class="w-full max-w-md mx-auto flex flex-col gap-8 items-center mt-2 mb-28">
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/01.png" alt="fishcake fingers gimbap image1" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="0" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/02.png" alt="fishcake fingers gimbap image2" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="1" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/03.png" alt="fishcake fingers gimbap image3" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="2" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/04.png" alt="fishcake fingers gimbap image4" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="3" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/05.png" alt="fishcake fingers gimbap image5" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="4" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/06.png" alt="fishcake fingers gimbap image6" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="5" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/07.png" alt="fishcake fingers gimbap image7" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="6" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/08.png" alt="fishcake fingers gimbap image8" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="7" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/09.png" alt="fishcake fingers gimbap image9" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="8" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/10.png" alt="fishcake fingers gimbap image10" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="9" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/11.png" alt="fishcake fingers gimbap image11" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="10" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/12.png" alt="fishcake fingers gimbap image12" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="11" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/13.png" alt="fishcake fingers gimbap image13" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="12" />
-    <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/14.png" alt="fishcake fingers gimbap image14" class="w-full aspect-[3/4] object-cover rounded-md cursor-pointer" data-idx="13" />
-  </main>
-  <!-- Swiper 갤러리 모달 -->
-  <div id="gallery-modal" class="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center hidden">
-    <div class="relative w-full h-full flex items-center justify-center">
-      <button id="close-modal" class="absolute top-4 right-4 text-white text-3xl z-50">&times;</button>
-      <div class="w-full max-w-2xl h-[60vh] sm:h-[80vh] flex items-center">
-        <!-- Swiper -->
-        <div class="swiper w-full h-full">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/01.png" alt="fishcake fingers gimbap image1" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/02.png" alt="fishcake fingers gimbap image2" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/03.png" alt="fishcake fingers gimbap image3" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/04.png" alt="fishcake fingers gimbap image4" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/05.png" alt="fishcake fingers gimbap image5" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/06.png" alt="fishcake fingers gimbap image6" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/07.png" alt="fishcake fingers gimbap image7" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/08.png" alt="fishcake fingers gimbap image8" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/09.png" alt="fishcake fingers gimbap image9" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/10.png" alt="fishcake fingers gimbap image10" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/11.png" alt="fishcake fingers gimbap image11" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/12.png" alt="fishcake fingers gimbap image12" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/13.png" alt="fishcake fingers gimbap image13" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-            <div class="swiper-slide flex items-center justify-center bg-black">
-              <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap_eng/14.png" alt="fishcake fingers gimbap image14" class="object-contain max-h-full max-w-full mx-auto" />
-            </div>
-
+  <!-- 상단 이미지 -->
+  <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r05_fishcakefingergimbap/00.jpg" alt="어묵 손가락 김밥"
+    class="w-full h-80 object-cover shadow" />
+  <!-- 메인 컨텐츠 섹션 -->
+  <div class="w-full max-w-[700px] py-24 mx-auto">
+    <!-- intro 간략 소개 -->
+    <div class="flex flex-col items-center">
+      <!-- 제목 -->
+      <h1 class="text-4xl font-bold text-gray-800 mb-5 tracking-wide">Eomuk Finger Gimbap</h1>
+      <!-- 정보 바 -->
+      <div class="flex flex-wrap justify-center items-center gap-4 text-lg text-gray-700 mb-5">
+        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">person</span>Servings: 3
+        </div>
+        <span class="mx-2">|</span>
+        <div class="group relative">
+          <div class="flex items-center gap-2 cursor-pointer" onclick="toggleTooltip(this)">
+            <svg class="w-5 h-5 text-[#37332F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-[#37332F] cursor-pointer">$5</span>
           </div>
-          <!-- Add Arrows -->
-          <div class="swiper-button-next text-white"></div>
-          <div class="swiper-button-prev text-white"></div>
+          <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-black/80 text-white text-sm rounded hidden w-[300px] break-words">
+            • The price is calculated assuming basic ingredients like onions, green onions, chili peppers, minced garlic, sesame seeds, and soy sauce are already available at home.<br>
+            • The price reflects the actual amount used in the recipe, not the amount paid at the store.<br>
+            • (Example) Even if you bought a $10 pack of frozen chicken thighs, if you only used $1 worth in the recipe, it would be listed as $1 here.
+          </div>
+        </div>
+        <span class="mx-2">|</span>
+        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">schedule</span> 40 min
+        </div>
+      </div>
+      <!-- 하단 정보 -->
+      <div class="text-center text-base text-gray-500">
+        Recipe reference: <a href="https://www.youtube.com/watch?v=chnArCaEpqA&t=111s" target="_blank"
+          rel="noopener noreferrer" class="font-roboto text-blue-600 hover:underline">@이남자의cook</a>
+      </div>
+      <a href="mustread.html" target="_blank" rel="noopener noreferrer" class="mt-4 px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors inline-block">★Must read★</a>
+      <!-- 구글 아이콘 폰트 -->
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    </div>
+  </div>
+  <!-- 재료 꺼내기 섹션 -->
+  <section class="w-full bg-[#F5F5F7]">
+    <div class="w-full flex flex-col items-center justify-center py-24">
+      <h1 class="text-4xl font-bold tracking-wide mb-4">Take out ingredients</h1>
+      <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
+        <span class="font-medium">✅ Take out ingredients <span class="opacity-50">→ prep ingredients → make sauce → cook</span></span>
+      </div>
+    </div>
+    <!-- 재료 세트들 -->
+    <div class="w-full px-5 flex flex-col md:flex-row flex-wrap gap-4 justify-center pb-24">
+      <!-- 세트 1: 윗쪽 수납장 -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장01.png" alt="주방과 냉장고" class="w-full mx-auto" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">① Top shelf</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>Cutting board</li>
+            <li>Knife</li>
+            <li>Frying pan</li>
+            <li>Spoon</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 세트 2: 아랫쪽 수납장 -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장02.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">② Lower shelf</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>Soy sauce</li>
+            <li>Sugar</li>
+            <li>Salt</li>
+            <li>Vinegar</li>
+            <li>Sesame seeds</li>
+            <li>Cooking oil</li>
+            <li>Water</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 세트 3: 아랫쪽 수납장 -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장03.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">③ Lower shelf</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>Cutting board</li>
+            <li>Knife</li>
+            <li>Frying pan</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 세트 4: 냉장실 -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장04.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">④ Refrigerator</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>Fish cakes</li>
+            <li>Onion 1</li>
+            <li>Green chili peppers 2</li>
+            <li>Red chili peppers 2</li>
+            <li>Green onions 2</li>
+            <li>Perilla oil 2T</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 세트 5: 냉동실 -->
+      <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
+        <img src="img/kitchen 부엌수납장05.png" alt="주방과 냉장고" class="w-full mx-auto" />
+        <div class="w-full mx-auto p-6">
+          <span class="font-bold">⑤ Freezer</span>
+          <ul class="list-disc pl-6 mt-2">
+            <li>Minced garlic 1T</li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Swiper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    let swiper;
-    const modal = document.getElementById('gallery-modal');
-    const closeBtn = document.getElementById('close-modal');
-    const images = document.querySelectorAll('main img[data-idx]');
-    // 이미지 클릭 시 모달 오픈 + 해당 인덱스로 이동
-    images.forEach((img, idx) => {
-      img.addEventListener('click', () => {
-        modal.classList.remove('hidden');
-        if (!swiper) {
-          swiper = new Swiper('.swiper', {
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-            loop: false,
-            initialSlide: idx,
-          });
-        } else {
-          swiper.slideTo(idx, 0);
-        }
-      });
-    });
-    // 닫기 버튼
-    closeBtn.addEventListener('click', () => {
-      modal.classList.add('hidden');
-    });
-    // 바깥 클릭 시 닫기
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.add('hidden');
-      }
-    });
-    // 상단바 뒤로가기(홈 이동) 버튼 클릭 시 스크롤 위치 저장 및 직접 이동
-    const backBtn = document.querySelector('header a[href="index.html"]');
-    if (backBtn) {
-      backBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        sessionStorage.setItem('scrollY', window.scrollY);
-        window.location.href = this.getAttribute('href');
-      });
-    }
-  </script>
+  </section>
+
+  <!-- 재료 손질 섹션 -->
+  <section class="w-full">
+    <div class="w-full flex flex-col items-center justify-center py-24">
+      <h1 class="text-4xl font-bold tracking-wide mb-4">Prep ingredients</h1>
+      <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
+        <span class="font-medium opacity-50">Take out ingredients <span class="opacity-50">→</span></span>
+        <span class="font-medium">✅ Prep ingredients <span class="opacity-50">→ make sauce → cook</span></span>
+      </div>
+    </div>
+    <!-- 재료 손질 프로세스 -->
+    <div class="w-full mx-auto">
+      <div class="border border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Wash in water</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Place in colander to drain water</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Wash carrots</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Peel skin with vegetable peeler (skip if using pre-washed carrots)</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Place in colander to drain water</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Take out 6 fish and wash in water</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Slice thinly with knife (leave on cutting board)</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Slice carrots thinly with vegetable peeler</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Add carrots to pan. Place pan on induction stove and wait.</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Sprinkle 1/4T salt on carrots</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Add 1T cooking oil to pan and stir-fry carrots</div>
+        <div class="text-center text-[#37332F] font-normal mt-4 px-4">🔥🔥 Medium heat</div>
+        <div class="text-center text-[#37332F] font-normal mt-4 px-4">Until carrots are cooked to your liking</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Spread stir-fried carrots on tray to cool</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 양념 만들기 섹션 -->
+  <section class="w-full bg-[#F5F5F7]">
+    <div class="w-full flex flex-col items-center justify-center py-24">
+      <h1 class="text-4xl font-bold tracking-wide mb-4">Make sauce</h1>
+      <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
+        <span class="font-medium opacity-50">Take out ingredients → prep ingredients <span class="opacity-50">→</span></span>
+        <span class="font-medium">✅ Make sauce <span class="opacity-50">→ cook</span></span>
+      </div>
+    </div>
+    <!-- 양념 프로세스 -->
+    <div class="w-full mx-auto">
+      <div class="border border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">★ Mix these ingredients in a bowl with a spoon ★</div>
+      </div>
+      <div class="border border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Red pepper powder 2T</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Soy sauce 2T</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Sugar 1T</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Vinegar 1T</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Sesame seeds 1T</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Minced garlic 1T</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Mix well with spoon</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 조리 섹션 -->
+  <section class="w-full">
+    <div class="w-full flex flex-col items-center justify-center py-24">
+      <h1 class="text-4xl font-bold tracking-wide mb-4">Cook</h1>
+      <div class="flex flex-row flex-wrap items-center justify-center text-lg w-full text-center">
+        <span class="font-medium opacity-50">Take out ingredients → prep ingredients → make sauce <span class="opacity-50">→</span></span>
+        <span class="font-medium">✅ Cook</span>
+      </div>
+    </div>
+    <!-- 조리 프로세스 -->
+    <div class="w-full mx-auto">
+      <div class="border border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Put fish in frying pan</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Add 1T salt and 2T perilla oil</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Cook until fish are done</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Add sauce and mix</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Add onion and mix</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Add green chili peppers and mix</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Add red chili peppers and mix</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">Add green onions and mix</div>
+      </div>
+      <div class="border-b border-[#e0ded9] py-24">
+        <div class="text-center text-3xl text-[#37332F] font-normal px-4">★ Enjoy! ★</div>
+      </div>
+    </div>
+  </section>
+
   <script>
     function toggleTooltip(element) {
       const tooltip = element.nextElementSibling;
@@ -176,6 +343,15 @@
         }
       });
     });
+
+    // Set opacity of Korean image to 50% when on English page
+    document.addEventListener('DOMContentLoaded', function() {
+      const korImage = document.querySelector('a[href="r05_fishcakefingergimbap.html"] img');
+      if (korImage) {
+        korImage.style.opacity = '0.5';
+      }
+    });
   </script>
 </body>
+
 </html>

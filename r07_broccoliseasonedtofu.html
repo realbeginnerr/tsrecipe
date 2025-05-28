@@ -65,7 +65,14 @@
       </svg>
     </a>
     <h1 class="text-base font-medium">브로콜리 두부 무침</h1>
-    <div class="w-8"></div>
+    <div class="flex gap-[8px] ml-2">
+      <a href="r07_broccoliseasonedtofu.html" class="text-sm font-bold text-blue-600">
+        <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/kor.png" alt="한국어" style="height: 20px;" />
+      </a>
+      <a href="r07_broccoliseasonedtofu_eng.html" class="text-sm font-medium text-gray-600 hover:text-gray-900">
+        <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/eng.png" alt="English" style="height: 20px;" />
+      </a>
+    </div>
   </header>
   <!-- 상단 이미지 -->
   <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r07_broccoliseasonedtofu/00.jpg" alt="브로콜리 두부 무침"
@@ -86,7 +93,7 @@
             <svg class="w-5 h-5 text-[#37332F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
-            <span class="text-[#37332F] cursor-pointer">1,000원</span>
+            <span class="text-[#37332F] cursor-pointer">4,000원</span>
           </div>
           <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-black/80 text-white text-sm rounded hidden w-[300px] break-words">
             • 양파, 대파, 청양고추, 다진마늘, 깨, 간장 등 기본적인 재료들이 집에 이미 있다고 가정하고 계산한 가격임.<br>
@@ -100,9 +107,10 @@
       </div>
       <!-- 하단 정보 -->
       <div class="text-center text-base text-gray-500">
-        레시피 참고: <a href="https://m.10000recipe.com/recipe/6954790" target="_blank"
-          rel="noopener noreferrer" class="font-roboto text-blue-600 hover:underline">@요리하는러라</a>
+        레시피 참고: <a href="https://www.youtube.com/watch?v=6JMzS_dzT5Q" target="_blank"
+          rel="noopener noreferrer" class="font-roboto text-blue-600 hover:underline">@이남자의cook</a>
       </div>
+      <a href="mustread.html" target="_blank" rel="noopener noreferrer" class="mt-4 px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors inline-block">★필독★</a>
       <!-- 구글 아이콘 폰트 -->
       <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     </div>
@@ -291,18 +299,29 @@
   </section>
 
   <script>
-    function toggleTooltip(element) {
-      const tooltip = element.nextElementSibling;
-      tooltip.classList.toggle('hidden');
+    // 툴팁 토글 함수
+    function toggleTooltip(button) {
+      const tooltip = button.nextElementSibling;
+      if (tooltip.style.display === 'block') {
+        tooltip.style.display = 'none';
+      } else {
+        tooltip.style.display = 'block';
+      }
     }
 
-    document.addEventListener('click', function(event) {
-      const tooltips = document.querySelectorAll('[class*="tooltip"]');
-      tooltips.forEach(tooltip => {
-        if (!tooltip.contains(event.target) && !event.target.matches('.cursor-pointer')) {
-          tooltip.classList.add('hidden');
-        }
-      });
+    // 현재 페이지의 언어 이미지 투명도 조정
+    document.addEventListener('DOMContentLoaded', function() {
+      const currentPath = window.location.pathname;
+      const isEnglishPage = currentPath.includes('_eng.html');
+      
+      const koreanImage = document.querySelector('a[href="r07_broccoliseasonedtofu.html"] img');
+      const englishImage = document.querySelector('a[href="r07_broccoliseasonedtofu_eng.html"] img');
+      
+      if (isEnglishPage) {
+        if (koreanImage) koreanImage.style.opacity = '0.5';
+      } else {
+        if (englishImage) englishImage.style.opacity = '0.5';
+      }
     });
   </script>
 </body>
