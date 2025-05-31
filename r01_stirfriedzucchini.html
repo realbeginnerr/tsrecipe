@@ -13,7 +13,7 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>애호박 볶음</title>
+  <title>test</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- 공통 스타일 -->
@@ -53,7 +53,200 @@
     .step-padding {
       @apply px-4;
     }
+
+    /* 조리 섹션 줄바꿈 스타일 */
+    #cookContainer br {
+      display: block;
+      content: "";
+      margin-bottom: 4rem;
+    }
+    .cook-line-break {
+      margin-bottom: 1.5rem;
+    }
+    .cook-paragraph {
+      margin-bottom: 2rem;
+    }
   </style>
+  <script>
+    // Airtable API 설정
+    const AIRTABLE_API_KEY = 'patyLDZFfu4aw5BjS.01ee49cf56f045cca1e6f9b74d37c8146bd8899af551184657d9957a3bd87216';
+    const BASE_ID = 'appnF9og3d91DAxI5';
+    const TABLE_ID = 'tblBhJnXRFDttNlft';
+
+    // Airtable에서 데이터 가져오기
+    async function fetchAirtableData() {
+      try {
+        const response = await fetch(`https://api.airtable.com/v0/${BASE_ID}/${TABLE_ID}?filterByFormula={ID}="7"`, {
+          headers: {
+            'Authorization': `Bearer ${AIRTABLE_API_KEY}`,
+            'Content-Type': 'application/json'
+          }
+        });
+        
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        
+        const data = await response.json();
+        console.log('전체 Airtable 응답 데이터:', data);
+        
+        // Recipe_kor 테이블의 첫 번째 행의 데이터 확인
+        if (data.records && data.records.length > 0) {
+          const firstRecord = data.records[0];
+          console.log('ID 7의 모든 필드:', firstRecord.fields);
+          
+          // h1 태그에 데이터 표시
+          const h1Elements = document.querySelectorAll('h1');
+          h1Elements.forEach(h1 => {
+            if (h1.textContent === '') {
+              h1.textContent = firstRecord.fields['Recipe Name'];
+            }
+          });
+
+          // 상단 이미지 업데이트
+          const topImage = document.querySelector('img[alt="test"]');
+          if (topImage && firstRecord.fields['Recipe Photo']) {
+            topImage.src = firstRecord.fields['Recipe Photo'][0].url;
+            topImage.alt = firstRecord.fields['Recipe Name'];
+          }
+
+          // Servings 데이터 표시
+          const servingsElement = document.getElementById('servings');
+          if (servingsElement && firstRecord.fields['Servings']) {
+            servingsElement.textContent = firstRecord.fields['Servings'];
+          }
+
+          // Cost 데이터 표시
+          const costElement = document.getElementById('cost');
+          if (costElement && firstRecord.fields['Cost']) {
+            costElement.textContent = Number(firstRecord.fields['Cost']).toLocaleString();
+          }
+
+          // Cooking Time 데이터 표시
+          const cookingTimeElement = document.getElementById('cookingTime');
+          if (cookingTimeElement && firstRecord.fields['Cooking Time']) {
+            cookingTimeElement.textContent = firstRecord.fields['Cooking Time'];
+          }
+
+          // Ref Name 데이터 표시
+          const refNameElement = document.getElementById('refName');
+          if (refNameElement && firstRecord.fields['Ref Name']) {
+            refNameElement.textContent = firstRecord.fields['Ref Name'];
+          }
+
+          // Ref Link 데이터 표시
+          const refLinkElement = document.getElementById('refLink');
+          if (refLinkElement && firstRecord.fields['Ref Link']) {
+            refLinkElement.href = firstRecord.fields['Ref Link'];
+          }
+
+          // Thing to Buy 데이터 표시
+          const thingsToBuyElement = document.getElementById('thingsToBuy');
+          console.log('Thinks_To_Buy 필드 존재 여부:', 'Thinks_To_Buy' in firstRecord.fields);
+          console.log('Thinks_To_Buy 필드 값:', firstRecord.fields['Thinks_To_Buy']);
+          
+          if (thingsToBuyElement && firstRecord.fields['Thinks_To_Buy']) {
+            console.log('Original Thinks_To_Buy data:', firstRecord.fields['Thinks_To_Buy']);
+            const items = firstRecord.fields['Thinks_To_Buy'].split(',');
+            console.log('Split items:', items);
+            thingsToBuyElement.innerHTML = items.map(item => `<li>${item.trim()}</li>`).join('');
+            console.log('Final HTML:', thingsToBuyElement.innerHTML);
+          } else {
+            console.log('Thinks_To_Buy 데이터를 표시할 수 없음:', {
+              thingsToBuyElement: thingsToBuyElement,
+              hasThinksToBuy: firstRecord.fields['Thinks_To_Buy']
+            });
+          }
+
+          // 1Top_shelf 데이터 표시
+          const topShelfElement = document.querySelector('.w-full.md\\:w-\\[calc\\(20\\%-16px\\)\\].min-w-\\[280px\\] .list-disc');
+          if (topShelfElement && firstRecord.fields['1Top_shelf']) {
+            const items = firstRecord.fields['1Top_shelf'].split(',');
+            topShelfElement.innerHTML = items.map(item => `<li>${item.trim()}</li>`).join('');
+          }
+
+          // 2Bottom_shelf 데이터 표시
+          const bottomShelfElement = document.querySelectorAll('.w-full.md\\:w-\\[calc\\(20\\%-16px\\)\\].min-w-\\[280px\\] .list-disc')[1];
+          if (bottomShelfElement && firstRecord.fields['2Bottom_shelf']) {
+            const items = firstRecord.fields['2Bottom_shelf'].split(',');
+            bottomShelfElement.innerHTML = items.map(item => `<li>${item.trim()}</li>`).join('');
+          }
+
+          // 3Bottom_shelf 데이터 표시
+          const thirdShelfElement = document.querySelectorAll('.w-full.md\\:w-\\[calc\\(20\\%-16px\\)\\].min-w-\\[280px\\] .list-disc')[2];
+          if (thirdShelfElement && firstRecord.fields['3Bottom_shelf']) {
+            const items = firstRecord.fields['3Bottom_shelf'].split(',');
+            thirdShelfElement.innerHTML = items.map(item => `<li>${item.trim()}</li>`).join('');
+          }
+
+          // 4Refrigerator 데이터 표시
+          const refrigeratorElement = document.querySelectorAll('.w-full.md\\:w-\\[calc\\(20\\%-16px\\)\\].min-w-\\[280px\\] .list-disc')[3];
+          if (refrigeratorElement && firstRecord.fields['4Refrigerator']) {
+            const items = firstRecord.fields['4Refrigerator'].split(',');
+            refrigeratorElement.innerHTML = items.map(item => `<li>${item.trim()}</li>`).join('');
+          }
+
+          // 5Freezer 데이터 표시
+          const freezerElement = document.querySelectorAll('.w-full.md\\:w-\\[calc\\(20\\%-16px\\)\\].min-w-\\[280px\\] .list-disc')[4];
+          if (freezerElement && firstRecord.fields['5Freezer']) {
+            const items = firstRecord.fields['5Freezer'].split(',');
+            freezerElement.innerHTML = items.map(item => `<li>${item.trim()}</li>`).join('');
+          }
+
+          // Section_sauce 데이터 표시
+          const sauceContainer = document.getElementById('sauceContainer');
+          if (sauceContainer && firstRecord.fields['Section_sauce']) {
+            const items = firstRecord.fields['Section_sauce'].split(',');
+            sauceContainer.innerHTML = items.map((item, index) => `
+              <div class="${index === 0 ? 'border' : 'border-b'} border-[#e0ded9] py-24">
+                <div class="text-center text-3xl text-[#37332F] font-normal px-4">${item.trim()}</div>
+              </div>
+            `).join('');
+          }
+
+          // Section_ingredients 데이터 표시
+          const ingredientsContainer = document.getElementById('ingredientsContainer');
+          if (ingredientsContainer && firstRecord.fields['Section_ingredients']) {
+            const items = firstRecord.fields['Section_ingredients'].split(',');
+            ingredientsContainer.innerHTML = items.map((item, index) => `
+              <div class="${index === 0 ? 'border' : 'border-b'} border-[#e0ded9] py-24">
+                <div class="text-center text-3xl text-[#37332F] font-normal px-4">${item.trim()}</div>
+              </div>
+            `).join('');
+          }
+
+          // Section_cook 데이터 표시
+          const cookContainer = document.getElementById('cookContainer');
+          if (cookContainer && firstRecord.fields['Section_cook']) {
+            const items = firstRecord.fields['Section_cook'].split(',');
+            cookContainer.innerHTML = items.map((item, index) => {
+              // br 태그를 div로 변환
+              const processedItem = item.trim()
+                .replace(/<br>/g, '</div><div class="cook-line-break">')
+                .replace(/<p>/g, '</div><div class="cook-paragraph">')
+                .replace(/<\/p>/g, '</div>');
+              
+              return `
+                <div class="${index === 0 ? 'border' : 'border-b'} border-[#e0ded9] py-24">
+                  <div class="text-center text-3xl text-[#37332F] font-normal px-4">
+                    <div class="cook-line-break">${processedItem}</div>
+                  </div>
+                </div>
+              `;
+            }).join('');
+          }
+        } else {
+          console.log('레코드를 찾을 수 없음');
+        }
+        return data;
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+
+    // 페이지 로드 시 데이터 가져오기
+    window.addEventListener('load', fetchAirtableData);
+  </script>
 </head>
 
 <body class="min-h-screen flex flex-col items-center">
@@ -64,7 +257,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M4.5 10.5V19a2 2 0 002 2h2.5a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1H17.5a2 2 0 002-2v-8.5" />
       </svg>
     </a>
-    <h1 class="text-base font-medium">애호박 볶음</h1>
+    <h1 class="text-base font-medium"></h1>
     <div class="flex gap-[8px] ml-2">
       <a href="r01_stirfriedzucchini.html" class="text-sm font-bold text-blue-600">
         <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/kor.png" alt="한국어" style="height: 20px;" />
@@ -75,17 +268,17 @@
     </div>
   </header>
   <!-- 상단 이미지 -->
-  <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini/00.jpg" alt="애호박 볶음"
+  <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r01_stirfriedzucchini/00.jpg" alt="test"
     class="w-full h-80 object-cover shadow" />
   <!-- 메인 컨텐츠 섹션 -->
   <div class="w-full max-w-[700px] py-24 mx-auto">
     <!-- intro 간략 소개 -->
     <div class="flex flex-col items-center">
       <!-- 제목 -->
-      <h1 class="text-4xl font-bold text-gray-800 mb-5 tracking-wide">애호박 볶음</h1>
+      <h1 class="text-4xl font-bold text-gray-800 mb-5 tracking-wide"></h1>
       <!-- 정보 바 -->
       <div class="flex flex-wrap justify-center items-center gap-4 text-lg text-gray-700 mb-5">
-        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">person</span> 2인분
+        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">person</span> <span id="servings"></span>인분
         </div>
         <span class="mx-2">|</span>
         <div class="group relative">
@@ -93,7 +286,7 @@
             <svg class="w-5 h-5 text-[#37332F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
-            <span class="text-[#37332F] cursor-pointer">2,000원</span>
+            <span class="text-[#37332F] cursor-pointer"><span id="cost"></span>원</span>
           </div>
           <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-4 py-3 bg-black/80 text-white text-sm rounded hidden w-[300px] break-words">
             • 양파, 대파, 청양고추, 다진마늘, 깨, 간장 등 기본적인 재료들이 집에 이미 있다고 가정하고 계산한 가격임.<br>
@@ -102,17 +295,27 @@
           </div>
         </div>
         <span class="mx-2">|</span>
-        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">schedule</span> 20분
+        <div class="flex items-center gap-1"><span class="material-symbols-outlined align-middle">schedule</span> <span id="cookingTime"></span>분
         </div>
       </div>
       <!-- 하단 정보 -->
       <div class="text-center text-base text-gray-500">
-        레시피 참고: <a href="https://www.youtube.com/watch?v=6JMzS_dzT5Q" target="_blank"
-          rel="noopener noreferrer" class="font-roboto text-blue-600 hover:underline">@이남자의cook</a>
+        레시피 참고: <a href="" id="refLink" target="_blank"
+          rel="noopener noreferrer" class="font-roboto text-blue-600 hover:underline">@<span id="refName"></span></a>
       </div>
-      <a href="mustread.html" target="_blank" rel="noopener noreferrer" class="mt-4 px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors inline-block">★필독★</a>
+      <!-- 필독 버튼 -->
+      <a href="mustread.html" target="_blank" rel="noopener noreferrer" class="mt-4 mb-16 px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors inline-block">★필독★</a>
       <!-- 구글 아이콘 폰트 -->
       <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    </div>
+
+    <!-- 구입할 것 -->
+    <div>
+      <div class="bg-gray-50 p-6 rounded-lg">
+        <h2 class="text-2xl font-bold mb-4 text-left">구입할 것</h2>
+        <ul class="list-disc pl-5 space-y-2" id="thingsToBuy">
+        </ul>
+      </div>
     </div>
   </div>
   <!-- 재료 꺼내기 섹션 -->
@@ -131,8 +334,6 @@
         <div class="w-full mx-auto p-6">
           <span class="font-bold">① 윗쪽 선반</span>
           <ul class="list-disc pl-6 mt-2">
-            <li>숟가락</li>
-            <li>종이컵</li>
           </ul>
         </div>
       </div>
@@ -143,13 +344,6 @@
         <div class="w-full mx-auto p-6">
           <span class="font-bold">② 아랫쪽 선반</span>
           <ul class="list-disc pl-6 mt-2">
-            <li>양조간장 (진간장)</li>
-            <li>설탕</li>
-            <li>소금</li>
-            <li>식초 (또는 매실액)</li>
-            <li>통깨</li>
-            <li>식용유</li>
-            <li>물</li>
           </ul>
         </div>
       </div>
@@ -160,9 +354,6 @@
         <div class="w-full mx-auto p-6">
           <span class="font-bold">③ 아랫쪽 선반</span>
           <ul class="list-disc pl-6 mt-2">
-            <li>도마</li>
-            <li>칼</li>
-            <li>프라이팬</li>
           </ul>
         </div>
       </div>
@@ -173,10 +364,6 @@
         <div class="w-full mx-auto p-6">
           <span class="font-bold">④ 냉장실</span>
           <ul class="list-disc pl-6 mt-2">
-            <li>애호박 2개 🛒</li>
-            <li>들기름 (또는 참기름)</li>
-            <li>양파 1개</li>
-            <li>청양고추 2개</li>
           </ul>
         </div>
       </div>
@@ -187,7 +374,6 @@
         <div class="w-full mx-auto p-6">
           <span class="font-bold">⑤ 냉동실</span>
           <ul class="list-disc pl-6 mt-2">
-            <li>다진마늘 1T</li>
           </ul>
         </div>
       </div>
@@ -204,19 +390,7 @@
       </div>
     </div>
     <!-- 양념 프로세스 -->
-    <div class="w-full mx-auto">
-      <div class="border border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">★ 아래 재료들 종이컵에 넣고 숟가락으로 잘 섞어주기 ★</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">설탕 1T</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">양조간장 8T</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">식초 2T</div>
-      </div>
+    <div class="w-full mx-auto" id="sauceContainer">
     </div>
   </section>
 
@@ -230,22 +404,7 @@
       </div>
     </div>
     <!-- 재료 손질 프로세스 -->
-    <div class="w-full mx-auto">
-      <div class="border border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">💧 애호박 2개 씻기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">나무젓가락 두께 정도로 채썰어주기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">프라이팬에 넣기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">소금 4꼬집 넣기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">들기름 2T, 식용유 1T 두르기</div>
-      </div>
+    <div class="w-full mx-auto" id="ingredientsContainer">
     </div>
   </section>
 
@@ -259,20 +418,7 @@
       </div>
     </div>
     <!-- 조리 프로세스 -->
-    <div class="w-full mx-auto">
-      <div class="border border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">실리콘 주걱으로 팬에 담겨있는 재료 볶기</div>
-        <div class="text-center text-[#37332F] font-normal mt-4 px-4">🔥🔥 중불</div>
-        <div class="text-center text-[#37332F] font-normal mt-4 px-4">양파, 애호박 반 이상이 익어서 투명해질까지 볶기</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">양파, 애호박이 어느정도 익으면 양념 넣고 좀 더 볶아주기</div>
-        <div class="text-center text-[#37332F] font-normal mt-4 px-4">🔥🔥 중불</div>
-        <div class="text-center text-[#37332F] font-normal mt-4 px-4">다 익었으면 불 끄고 완성!</div>
-      </div>
-      <div class="border-b border-[#e0ded9] py-24">
-        <div class="text-center text-3xl text-[#37332F] font-normal px-4">★ 끝! ★</div>
-      </div>
+    <div class="w-full mx-auto" id="cookContainer">
     </div>
   </section>
 
