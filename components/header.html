@@ -1,0 +1,27 @@
+<!-- Header component extracted from index.html for React migration prep -->
+<header class="h-12 w-full flex items-center justify-between px-4 sticky top-0 bg-white z-20 border-b">
+  <a href="index.html">
+    <img src="../assets/img/logo.png" alt="T's recipe 로고" class="logo-img" />
+  </a>
+  <div class="relative">
+    <input type="text" placeholder="레시피 검색" class="w-48 h-8 px-3 py-1 text-sm border rounded-full focus:outline-none focus:border-gray-400" id="searchInput" />
+    <button class="absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer" id="searchButton">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+      </svg>
+    </button>
+    <button class="absolute right-8 top-1/2 transform -translate-y-1/2 cursor-pointer hidden" id="clearButton">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400 hover:text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  <div class="flex gap-[8px] ml-2">
+    <a href="index.html" class="text-sm font-bold text-blue-600">
+      <img src="../assets/img/kor.png" alt="한국어" class="lang-flag" />
+    </a>
+    <a href="index_eng.html" class="text-sm font-medium text-gray-600 hover:text-gray-900">
+      <img src="../assets/img/eng.png" alt="English" class="lang-flag" />
+    </a>
+  </div>
+</header> 

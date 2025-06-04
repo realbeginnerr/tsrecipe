@@ -18,6 +18,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- 공통 스타일 -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/main.css">
   <!-- Hotjar Tracking Code for tsrecipe -->
   <script>
     (function (h, o, t, j, a, r) {
@@ -35,6 +36,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <!-- Swiper.js CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- <style> block moved to /css/r07_broccoliseasonedtofu_eng.css for React migration prep -->
+  <link rel="stylesheet" href="../css/r07_broccoliseasonedtofu_eng.css">
   <style>
     body {
       font-family: 'Pretendard', 'Roboto', sans-serif;
@@ -67,10 +70,10 @@
     <h1 class="text-base font-medium">Seasoned Broccoli & Tofu</h1>
     <div class="flex gap-[8px] ml-2">
       <a href="r07_broccoliseasonedtofu.html" class="text-sm font-medium text-gray-600 hover:text-gray-900">
-        <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/kor.png" alt="한국어" style="height: 20px;" />
+        <img src="assets/img/kor.png" alt="한국어" class="lang-flag" />
       </a>
       <a href="r07_broccoliseasonedtofu_eng.html" class="text-sm font-bold text-blue-600">
-        <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/eng.png" alt="English" style="height: 20px;" />
+        <img src="assets/img/eng.png" alt="English" class="lang-flag" />
       </a>
     </div>
   </header>
@@ -139,7 +142,7 @@
     <div class="w-full px-5 flex flex-col md:flex-row flex-wrap gap-4 justify-center pb-24">
       <!-- 세트 1: 윗쪽 수납장 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
-        <img src="img/kitchen 부엌수납장01.png" alt="주방과 냉장고" class="w-full mx-auto" />
+        <img src="assets/img/kitchen 부엌수납장01.png" alt="Kitchen and refrigerator" class="w-full mx-auto" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">① Top shelf</span>
           <ul class="list-disc pl-6 mt-2">
@@ -151,7 +154,7 @@
 
       <!-- 세트 2: 아랫쪽 수납장 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
-        <img src="img/kitchen 부엌수납장02.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
+        <img src="assets/img/kitchen 부엌수납장02.png" alt="Kitchen and refrigerator" class="w-full mx-auto bg-black" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">② Lower shelf</span>
           <ul class="list-disc pl-6 mt-2">
@@ -165,7 +168,7 @@
 
       <!-- 세트 3: 아랫쪽 수납장 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
-        <img src="img/kitchen 부엌수납장03.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
+        <img src="assets/img/kitchen 부엌수납장03.png" alt="Kitchen and refrigerator" class="w-full mx-auto bg-black" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">③ Lower shelf</span>
           <ul class="list-disc pl-6 mt-2">
@@ -180,7 +183,7 @@
 
       <!-- 세트 4: 냉장실 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
-        <img src="img/kitchen 부엌수납장04.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
+        <img src="assets/img/kitchen 부엌수납장04.png" alt="Kitchen and refrigerator" class="w-full mx-auto bg-black" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">④ Refrigerator</span>
           <ul class="list-disc pl-6 mt-2">
@@ -194,7 +197,7 @@
 
       <!-- 세트 5: 냉동실 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
-        <img src="img/kitchen 부엌수납장05.png" alt="주방과 냉장고" class="w-full mx-auto" />
+        <img src="assets/img/kitchen 부엌수납장05.png" alt="Kitchen and refrigerator" class="w-full mx-auto" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">⑤ Freezer</span>
           <ul class="list-disc pl-6 mt-2">
@@ -310,29 +313,13 @@
     </div>
   </section>
 
+  <!-- <script> block moved to /js/r07_broccoliseasonedtofu_eng.js for React migration prep -->
+  <script src="../js/r07_broccoliseasonedtofu_eng.js"></script>
   <script>
-    // 툴크 토글 함수
-    function toggleTooltip(button) {
-      const tooltip = button.nextElementSibling;
-      if (tooltip.style.display === 'block') {
-        tooltip.style.display = 'none';
-      } else {
-        tooltip.style.display = 'block';
-      }
-    }
-
-    // 현재 페이지의 언어 이미지 투명도 조정
     document.addEventListener('DOMContentLoaded', function() {
-      const currentPath = window.location.pathname;
-      const isEnglishPage = currentPath.includes('_eng.html');
-      
-      const koreanImage = document.querySelector('a[href="r07_broccoliseasonedtofu.html"] img');
-      const englishImage = document.querySelector('a[href="r07_broccoliseasonedtofu_eng.html"] img');
-      
-      if (isEnglishPage) {
-        if (koreanImage) koreanImage.style.opacity = '0.5';
-      } else {
-        if (englishImage) englishImage.style.opacity = '0.5';
+      const korImage = document.querySelector('a[href="r07_broccoliseasonedtofu.html"] img[alt="한국어"]');
+      if (korImage) {
+        korImage.style.opacity = '0.5';
       }
     });
   </script>

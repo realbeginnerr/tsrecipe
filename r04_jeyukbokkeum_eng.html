@@ -16,6 +16,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- 공통 스타일 -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
   <!-- Hotjar Tracking Code for tsrecipe -->
   <script>
     (function (h, o, t, j, a, r) {
@@ -33,25 +35,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <!-- Swiper.js CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <style>
-    body {
-      font-family: 'Pretendard', 'Roboto', sans-serif;
-    }
-
-    .font-roboto {
-      font-family: 'Roboto', sans-serif;
-    }
-
-    .step-item {
-      @apply border-b border-[#e0ded9] py-24;
-    }
-    .step-content {
-      @apply text-center text-3xl text-[#37332F] font-normal;
-    }
-    .step-padding {
-      @apply px-4;
-    }
-  </style>
+  <link rel="stylesheet" href="../css/r04_jeyukbokkeum_eng.css">
 </head>
 
 <body class="min-h-screen flex flex-col items-center">
@@ -59,7 +43,6 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXZ2QZ2"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <!-- 상단 바 -->
   <header class="h-12 w-full flex items-center justify-between px-4 sticky top-0 bg-white z-20 border-b">
     <a href="index_eng.html" class="flex items-center justify-center w-8 h-8" aria-label="Go to home">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7 text-gray-700">
@@ -69,14 +52,13 @@
     <h1 class="text-base font-medium">Spicy Pork Stir-fry</h1>
     <div class="flex gap-[8px] ml-2">
       <a href="r04_jeyukbokkeum.html" class="text-sm font-medium text-gray-600 hover:text-gray-900">
-        <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/kor.png" alt="한국어" style="height: 20px;" />
+        <img src="assets/img/kor.png" alt="한국어" class="lang-flag" />
       </a>
       <a href="r04_jeyukbokkeum_eng.html" class="text-sm font-bold text-blue-600">
-        <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/eng.png" alt="English" style="height: 20px;" />
+        <img src="assets/img/eng.png" alt="English" class="lang-flag" />
       </a>
     </div>
   </header>
-  <!-- 상단 이미지 -->
   <img src="https://raw.githubusercontent.com/realbeginnerr/tsrecipe/main/img/r04_jeyukbokkeum/00.jpg" alt="Spicy Pork Stir-fry"
     class="w-full h-80 object-cover shadow" />
   <!-- 메인 컨텐츠 섹션 -->
@@ -139,7 +121,7 @@
     <div class="w-full px-5 flex flex-col md:flex-row flex-wrap gap-4 justify-center pb-24">
       <!-- 세트 1: 윗쪽 수납장 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
-        <img src="img/kitchen 부엌수납장01.png" alt="주방과 냉장고" class="w-full mx-auto" />
+        <img src="assets/img/kitchen 부엌수납장01.png" alt="Kitchen and refrigerator" class="w-full mx-auto" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">① Top shelf</span>
           <ul class="list-disc pl-6 mt-2">
@@ -153,7 +135,7 @@
 
       <!-- 세트 2: 아랫쪽 수납장 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
-        <img src="img/kitchen 부엌수납장02.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
+        <img src="assets/img/kitchen 부엌수납장02.png" alt="Kitchen and refrigerator" class="w-full mx-auto bg-black" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">② Lower shelf</span>
           <ul class="list-disc pl-6 mt-2">
@@ -170,7 +152,7 @@
 
       <!-- 세트 3: 아랫쪽 수납장 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
-        <img src="img/kitchen 부엌수납장03.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
+        <img src="assets/img/kitchen 부엌수납장03.png" alt="Kitchen and refrigerator" class="w-full mx-auto bg-black" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">③ Lower shelf</span>
           <ul class="list-disc pl-6 mt-2">
@@ -183,7 +165,7 @@
 
       <!-- 세트 4: 냉장실 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
-        <img src="img/kitchen 부엌수납장04.png" alt="주방과 냉장고" class="w-full mx-auto bg-black" />
+        <img src="assets/img/kitchen 부엌수납장04.png" alt="Kitchen and refrigerator" class="w-full mx-auto bg-black" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">④ Refrigerator</span>
           <ul class="list-disc pl-6 mt-2">
@@ -199,7 +181,7 @@
 
       <!-- 세트 5: 냉동실 -->
       <div class="w-full md:w-[calc(20%-16px)] min-w-[280px] border border-gray-200 rounded-lg bg-[#FFF]">
-        <img src="img/kitchen 부엌수납장05.png" alt="주방과 냉장고" class="w-full mx-auto" />
+        <img src="assets/img/kitchen 부엌수납장05.png" alt="Kitchen and refrigerator" class="w-full mx-auto" />
         <div class="w-full mx-auto p-6">
           <span class="font-bold">⑤ Freezer</span>
           <ul class="list-disc pl-6 mt-2">
@@ -321,27 +303,10 @@
     </div>
   </section>
 
+  <script src="../js/r04_jeyukbokkeum_eng.js"></script>
   <script>
-    function toggleTooltip(element) {
-      const tooltip = element.nextElementSibling;
-      tooltip.classList.toggle('hidden');
-    }
-
-    document.addEventListener('click', function(event) {
-      const tooltips = document.querySelectorAll('[class*="tooltip"]');
-      tooltips.forEach(tooltip => {
-        if (!tooltip.contains(event.target) && !event.target.matches('.cursor-pointer')) {
-          tooltip.classList.add('hidden');
-        }
-      });
-    });
-
-    // 현재 페이지에 따라 이미지 투명도 설정
     document.addEventListener('DOMContentLoaded', function() {
-      const currentPage = window.location.pathname;
       const korImage = document.querySelector('a[href="r04_jeyukbokkeum.html"] img[alt="한국어"]');
-      
-      // r04_jeyukbokkeum_eng.html 페이지에서는 kor 이미지만 50% 투명하게
       if (korImage) {
         korImage.style.opacity = '0.5';
       }

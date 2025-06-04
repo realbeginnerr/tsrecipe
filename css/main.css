@@ -1,0 +1,261 @@
+/* ===== index.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.logo-img { width: 86px; height: 20px; opacity: 1; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* ===== index_eng.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.logo-img { width: 86px; height: 20px; opacity: 1; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* ===== mustread.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.step-item { border-bottom: 1px solid #e0ded9; padding-top: 24px; padding-bottom: 24px; }
+.step-content { text-align: center; font-size: 1.875rem; color: #37332F; font-weight: 400; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+.kitchen-img { width: 100%; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+
+/* ===== mustread_eng.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.step-item { border-bottom: 1px solid #e0ded9; padding-top: 24px; padding-bottom: 24px; }
+.step-content { text-align: center; font-size: 1.875rem; color: #37332F; font-weight: 400; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+.kitchen-img { width: 100%; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+
+/* ===== r01_stirfriedzucchini.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.step-item { border-bottom: 1px solid #e0ded9; padding-top: 24px; padding-bottom: 24px; }
+.step-content { text-align: center; font-size: 1.875rem; color: #37332F; font-weight: 400; }
+.step-padding { padding-left: 1rem; padding-right: 1rem; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* ===== r01_stirfriedzucchini_eng.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.step-item { border-bottom: 1px solid #e0ded9; padding-top: 24px; padding-bottom: 24px; }
+.step-content { text-align: center; font-size: 1.875rem; color: #37332F; font-weight: 400; }
+.step-padding { padding-left: 1rem; padding-right: 1rem; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* ===== r02_shreddedradish.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.step-item { border-bottom: 1px solid #e0ded9; padding-top: 24px; padding-bottom: 24px; }
+.step-content { text-align: center; font-size: 1.875rem; color: #37332F; font-weight: 400; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* ===== r02_shreddedradish_eng.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.step-item { border-bottom: 1px solid #e0ded9; padding-top: 24px; padding-bottom: 24px; }
+.step-content { text-align: center; font-size: 1.875rem; color: #37332F; font-weight: 400; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* ===== r03_seasonedsoysauce.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.step-item { border-bottom: 1px solid #e0ded9; padding-top: 24px; padding-bottom: 24px; }
+.step-content { text-align: center; font-size: 1.875rem; color: #37332F; font-weight: 400; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* ===== r03_seasonedsoysauce_eng.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.step-item { border-bottom: 1px solid #e0ded9; padding-top: 24px; padding-bottom: 24px; }
+.step-content { text-align: center; font-size: 1.875rem; color: #37332F; font-weight: 400; }
+.step-padding { padding-left: 1rem; padding-right: 1rem; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* ===== r04_jeyukbokkeum.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.step-item { border-bottom: 1px solid #e0ded9; padding-top: 24px; padding-bottom: 24px; }
+.step-content { text-align: center; font-size: 1.875rem; color: #37332F; font-weight: 400; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* ===== r04_jeyukbokkeum_eng.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.step-item { border-bottom: 1px solid #e0ded9; padding-top: 24px; padding-bottom: 24px; }
+.step-content { text-align: center; font-size: 1.875rem; color: #37332F; font-weight: 400; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* ===== r05_fishcakefingergimbap.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.step-item { border-bottom: 1px solid #e0ded9; padding-top: 24px; padding-bottom: 24px; }
+.step-content { text-align: center; font-size: 1.875rem; color: #37332F; font-weight: 400; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* ===== r05_fishcakefingergimbap_eng.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.step-item { border-bottom: 1px solid #e0ded9; padding-top: 24px; padding-bottom: 24px; }
+.step-content { text-align: center; font-size: 1.875rem; color: #37332F; font-weight: 400; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* ===== r06_chickenteriyaki.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.step-item { border-bottom: 1px solid #e0ded9; padding-top: 24px; padding-bottom: 24px; }
+.step-content { text-align: center; font-size: 1.875rem; color: #37332F; font-weight: 400; }
+.step-padding { padding-left: 1rem; padding-right: 1rem; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* ===== r06_chickenteriyaki_eng.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.step-item { border-bottom: 1px solid #e0ded9; padding-top: 24px; padding-bottom: 24px; }
+.step-content { text-align: center; font-size: 1.875rem; color: #37332F; font-weight: 400; }
+.step-padding { padding-left: 1rem; padding-right: 1rem; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* ===== r07_broccoliseasonedtofu.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.step-item { border-bottom: 1px solid #e0ded9; padding-top: 24px; padding-bottom: 24px; }
+.step-content { text-align: center; font-size: 1.875rem; color: #37332F; font-weight: 400; }
+.step-padding { padding-left: 1rem; padding-right: 1rem; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* ===== r07_broccoliseasonedtofu_eng.css ===== */
+body { font-family: 'Pretendard', 'Roboto', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.step-item { border-bottom: 1px solid #e0ded9; padding-top: 24px; padding-bottom: 24px; }
+.step-content { text-align: center; font-size: 1.875rem; color: #37332F; font-weight: 400; }
+.step-padding { padding-left: 1rem; padding-right: 1rem; }
+.lang-flag { 
+  height: 20px; 
+  width: auto;
+  max-width: 30px;
+  object-fit: contain;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+/* ===== 커스텀 유틸 ===== */
+.hidden { display: none !important; } 
